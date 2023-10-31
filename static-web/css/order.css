@@ -1,0 +1,41 @@
+/*in the name of Allah*/
+
+.dikr_div
+{
+    font-family: monospace;
+    background: url(../AllahImage);
+    background-repeat: no-repeat;
+    background-size: 20cm;
+    background-attachment: fixed;
+}
+
+.dikr_div *
+{
+    color: green;
+}
+
+.error
+{
+    border: 1;
+    border-style: dashed;
+
+    margin: 0px;
+    font-size: 1cm;
+    font-family: serif;
+    text-align: center;
+    color: black;
+    background-color: red;
+}
+
+.notification
+{
+    border: 1;
+    border-style: groove;
+
+    margin: 0px;
+    font-size: 1cm;
+    font-family: serif;
+    text-align: center;
+    color: black;
+    background-color: yellow;
+}

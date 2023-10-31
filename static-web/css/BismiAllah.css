@@ -1,0 +1,40 @@
+/*in the name of Allah*/
+/*
+body
+{
+    text-align: right;
+    color: aqua;
+    background-color: yellowgreen;
+}
+
+
+
+
+#basmalaid
+{
+    color: blueviolet;
+    text-align: right;
+}
+
+.division
+{
+    background-color: blueviolet;
+}
+
+.division *
+{
+    color: black;
+    background-color: azure;
+}
+*/
+
+.basmala
+{
+    margin: 20px;
+    text-align: center;
+    color: blue;
+    background-color: aqua;
+    text-decoration: line-through overline underline;
+    border: 1;
+    border-style: dashed;
+}

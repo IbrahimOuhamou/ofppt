@@ -1,0 +1,37 @@
+/*in the name of Allah*/
+#login
+{
+    border: 1;
+    border-color: aqua;
+    border-style: solid;
+    border-radius: 20px;
+    width: max-content;
+    padding: 15px;
+    margin: 0 auto;
+
+    background-color: aquamarine;
+    /*-webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+    */
+}
+
+input
+{
+    background-color: yellow;
+    border-left-color: orange;
+    border-right-color: orange;
+    border-style: solid;
+
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+
+h4
+{
+    margin: 0;
+}

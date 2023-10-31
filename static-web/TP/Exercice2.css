@@ -1,0 +1,22 @@
+/*in the name of Allah*/
+
+.v_full
+{
+    background-color: lightblue;
+    text-align: center;
+    clear: both;
+}
+
+.m_nav
+{
+    float: left;
+    width: 20%;
+    background-color: blue;
+}
+
+#m_full
+{
+    width: auto;
+    height: auto;
+    background-color: coral;
+}
