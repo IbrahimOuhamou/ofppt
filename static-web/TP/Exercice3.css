@@ -1,14 +1,22 @@
 /*in the name of Allah*/
 
+*
+{
+    margin: 0;
+    box-sizing: border-box;
+}
+
 body
 {
     background-color: yellow;
+    margin: 0;
 }
 
 h1
 {
     color: purple;
     text-align: center;
+    height: 20vh;
 }
 
 #middle_left
@@ -17,6 +25,7 @@ h1
     width: 80vw;
     text-align: center;
     color: purple;
+    height: 75vh;
 }
 
 #middle_right
@@ -24,6 +33,7 @@ h1
     float: right;
     width: 10vw;
     margin-right: 1vw;
+    height: 75vh;
 }
 
 .labels
@@ -45,4 +55,7 @@ h1
     clear: both;
     text-align: center;
     margin-right: 1%;
+    height: 5vh;
+
+    margin-bottom: 0;
 }
