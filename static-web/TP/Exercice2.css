@@ -18,6 +18,12 @@ header
     margin: 0;
 }
 
+#section_content
+{
+    float: left;
+    text-align: right;
+}
+
 footer
 {
     height: 15vh;
@@ -54,5 +60,10 @@ footer
 
 nav a
 {
-    margin-left: 50px;
+    margin-left: 5%;
+}
+
+nav hr
+{
+    color: azure;
 }
