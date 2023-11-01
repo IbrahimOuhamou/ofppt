@@ -1,15 +1,10 @@
 /*in the name of Allah*/
-body
+*
 {
     margin: 0;
 }
 
-.temp_no_margin
-{
-    margin: 0;
-}
-
-#block_top
+header
 {
     height: 15vh;
     background-color: aqua;
@@ -23,9 +18,41 @@ body
     margin: 0;
 }
 
-#block_bottom
+footer
 {
     height: 15vh;
     background-color: aqua;
     margin: 0;
+}
+
+#nav_upper_right
+{
+    float: right;
+    height: 50%;
+    width: 20vw;
+    background-image: url("../AllahImage");
+    background-size: fill;
+    background-repeat: no-repeat;
+}
+
+#nav_upper_left
+{
+    float: left;
+    background-color: rgb(62, 240, 136);
+    width: 10vw;
+    height: 50%;
+}
+
+#nav_lower_left
+{
+    float: left;
+    clear: left;
+    background-color: rgb(229, 49, 229);
+    width: 10vw;
+    height: 50%;
+}
+
+nav a
+{
+    margin-left: 50px;
 }
