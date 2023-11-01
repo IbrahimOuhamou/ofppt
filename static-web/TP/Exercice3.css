@@ -2,6 +2,33 @@
 
 body
 {
-    height: 100vh; width: 100vw;
-    background-color: burlywood;
+    background-color: yellow;
+}
+
+h1
+{
+    color: purple;
+    text-align: center;
+}
+
+#middle_left
+{
+    float: left;
+    width: 80vw;
+    text-align: center;
+    color: purple;
+}
+
+#middle_right
+{
+    float: right;
+    width: 10vw;
+}
+
+aside
+{
+    background-color: white;
+    color: blue;
+    margin-right: 5%;
+    margin-top: 5%;
 }
