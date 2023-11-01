@@ -9,6 +9,8 @@ header
     height: 15vh;
     background-color: aqua;
     margin: 0;
+    color: aqua;
+    background-image: url("../AllahImage");
 }
 
 #block_middle
@@ -28,6 +30,8 @@ footer
     height: 15vh;
     background-color: aqua;
     margin: 0;
+    color: aqua;
+    background-image: url("../AllahImage");
 }
 
 #nav_upper_right
