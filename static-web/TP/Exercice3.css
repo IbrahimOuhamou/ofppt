@@ -25,10 +25,17 @@ h1
     width: 10vw;
 }
 
-aside
+.labels
 {
     background-color: white;
     color: blue;
     margin-right: 5%;
     margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+#div_bottom
+{
+    clear: both;
+    text-align: center;
 }
