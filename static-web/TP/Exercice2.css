@@ -1,22 +1,32 @@
 /*in the name of Allah*/
-
-.v_full
+body
 {
-    background-color: lightblue;
-    text-align: center;
-    clear: both;
+    margin: 0;
 }
 
-.m_nav
+.temp_no_margin
 {
-    float: left;
-    width: 20%;
-    background-color: blue;
+    margin: 0;
 }
 
-#m_full
+#block_top
 {
-    width: auto;
-    height: auto;
-    background-color: coral;
+    height: 15vh;
+    background-color: aqua;
+    margin: 0;
+    float:none;
+}
+
+#block_middle
+{
+    height: 70vh;
+    background-color: yellow;
+    margin: 0;
+}
+
+#block_bottom
+{
+    height: 15vh;
+    background-color: aqua;
+    margin: 0;
 }
