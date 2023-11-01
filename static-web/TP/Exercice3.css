@@ -23,19 +23,26 @@ h1
 {
     float: right;
     width: 10vw;
+    margin-right: 1vw;
 }
 
 .labels
 {
     background-color: white;
     color: blue;
-    margin-right: 5%;
-    margin-top: 5%;
-    margin-bottom: 5%;
+    margin-top: 1vh;
+    margin-bottom: 1vh;
+    border-color: black;
+    border-right-width: 1vw;
+    border-style: none;
+    border-right-style: solid;
 }
 
 #div_bottom
 {
+    background-image: image();
+
     clear: both;
     text-align: center;
+    margin-right: 1%;
 }
