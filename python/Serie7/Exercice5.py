@@ -3,7 +3,7 @@
 print("in the name of Allah")
 
 def is_cubic(num :int):
-    num_str :string = str(num)
+    num_str :str = str(num)
 
     sum: int = 0
 
