@@ -2,10 +2,10 @@
 
 print("in the name of Allah")
 
-def is_cubic(num :int):
-    num_str :str = str(num)
+def is_cubic(num):
+    num_str = str(num)
 
-    sum: int = 0
+    sum = 0
 
     for i in range(0, len(num_str)):
         sum += int(num_str[i]) ** 3
@@ -16,7 +16,7 @@ def is_cubic(num :int):
         return 0
 
 
-u_num :int = int(input("enter a number: "))
+u_num = int(input("enter a number: "))
 print("la resultat de la fonction est:", is_cubic(u_num))
 
 
