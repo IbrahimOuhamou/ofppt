@@ -1,0 +1,41 @@
+/*in the name of Allah*/
+
+#div_inscription
+{
+    background-color: lightblue;
+    float: left;
+    border: 1;
+    border-style: solid;
+    border-top-right-radius: 15%;
+
+    width: max-content;
+    margin: 0 40%;
+}
+
+input
+{
+    margin-top: 14px;
+}
+
+.temp_inherit
+{
+    margin-top: 7px;
+}
+
+select
+{
+    margin-block-start: 16px;
+}
+
+#div_inscription_left
+{
+    width: max-content;
+    float: left;
+}
+
+#div_inscription_right
+{
+    width: auto;
+    float: right;
+    text-align: left;
+}
