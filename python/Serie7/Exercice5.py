@@ -3,13 +3,15 @@
 print("in the name of Allah")
 
 def is_cubic(num):
-    num_str = str(num)
-
+    temp_num = num
     sum = 0
 
-    for i in range(0, len(num_str)):
-        sum += int(num_str[i]) ** 3
+    while temp_num >= 1:
+        sum += (temp_num % 10) ** 3
+        temp_num = temp_num // 10
 
+
+    print(sum)
     if sum == num:
         return 1
     else:
