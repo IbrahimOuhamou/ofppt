@@ -10,8 +10,6 @@ def is_cubic(num):
         sum += (temp_num % 10) ** 3
         temp_num = temp_num // 10
 
-
-    print(sum)
     if sum == num:
         return 1
     else:
@@ -19,6 +17,10 @@ def is_cubic(num):
 
 
 u_num = int(input("enter a number: "))
-print("la resultat de la fonction est:", is_cubic(u_num))
+print("la resultat de la fonction est: ", end="")
+if is_cubic(u_num) == 1:
+    print("cubique")
+else:
+    print("pas cubique")
 
 

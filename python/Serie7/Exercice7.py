@@ -14,7 +14,7 @@ def fact(num):
 def func_S(num):
     if not is_odd(num) or num < 5:
         return -1
-    
+
     result = 0
 
     for i in range(1, num + 1):
