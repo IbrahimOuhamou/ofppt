@@ -6,7 +6,7 @@ def is_cubic(num):
     temp_num = num
     sum = 0
 
-    while temp_num >= 1:
+    while temp_num != 0:
         sum += (temp_num % 10) ** 3
         temp_num = temp_num // 10
 
