@@ -23,6 +23,22 @@ header
     color: white;
 }
 
+#header_logo
+{
+    float: left;
+}
+
+#header_middle
+{
+    float: left;
+    margin-left: 40vw;
+}
+
+#header_right
+{
+    float: right;
+}
+
 #website_def, #website_categories, footer
 {
     text-align: center;
