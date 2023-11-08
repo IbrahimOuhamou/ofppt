@@ -1,0 +1,56 @@
+/*بسم الله الرحمن الرحيم*/
+
+.abstract_border_round
+{
+    border-style: hidden;
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+}
+
+body
+{
+    height: 100vh;
+    font-family: sans-serif;
+}
+
+header
+{
+    height: 10vh;
+    background-color: #330066;
+    color: white;
+}
+
+#website_def, #website_categories, footer
+{
+    text-align: center;
+    margin-right: 5vw;
+    margin-left: 5vw;
+}
+
+#website_def
+{
+    height: 25vh;
+}
+
+#website_categories
+{
+    height: 40vh;
+    background-color: lightpink;
+    color: white;
+}
+
+#m_footer
+{
+    height:10vh;
+    background-color: #330066;
+    color: white;
+}
+
+.m_button
+{
+    background-color: lightpink;
+    color: white;
+}
