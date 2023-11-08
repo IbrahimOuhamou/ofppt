@@ -12,8 +12,10 @@
 
 body
 {
+    background-color: rgb(199, 216, 226);
     height: 100vh;
     font-family: sans-serif;
+    margin: 0;
 }
 
 header
@@ -21,6 +23,12 @@ header
     height: 10vh;
     background-color: #330066;
     color: white;
+}
+
+#header_logo, #header_middle, #header_right
+{
+    height: 100%;
+    vertical-align: bottom;
 }
 
 #header_logo
@@ -32,10 +40,12 @@ header
 {
     float: left;
     margin-left: 40vw;
+    vertical-align: middle;
 }
 
 #header_right
 {
+    margin-right: 5vw;
     float: right;
 }
 
@@ -51,10 +61,20 @@ header
     height: 25vh;
 }
 
+#website_def_right
+{
+    float: right;
+}
+
+#website_def_left
+{
+    padding: 2%;
+}
+
 #website_categories
 {
     height: 40vh;
-    background-color: lightpink;
+    background-color: rgb(255,100,149);
     color: white;
 }
 
@@ -67,6 +87,7 @@ header
 
 .m_button
 {
-    background-color: lightpink;
+    background-color: rgb(255,100,149);
     color: white;
+    font-size: x-large;
 }
