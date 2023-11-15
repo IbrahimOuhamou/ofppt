@@ -1,0 +1,35 @@
+//BismiAllah
+
+/*
+	Ecrire un algorithme qui permet de d'inserer un element 'x' dans la position 'pos' dans un tableau 'tabp[]' de taille 'n'
+*/
+
+Variables x, pos, n : entier
+Tableau tab[] : entier
+
+Debut
+	ecrire("Donner la taile du tableau: ")
+	lire(n)
+	Redim(tab[n])
+	
+	pour i allent de  0 jusqu'a n - 1
+		ecrire("Donner un valeur: ")
+		lire(tab[i])
+	finpour
+
+	ecrire("donner la valeur et la position")
+	lire(x, n)
+	n <-- n + 1
+	Redim(tab[n])
+
+	pour i allent de n-2 jusqu'a pos pas -1
+		tab[i + 1] <-- tab[i]
+	finpour
+
+	tab[pos] <-- x
+
+	pour i allent de 0 jusqu'a n - 1
+		ecrire(tab[i], " ")
+	finpour
+
+fin
