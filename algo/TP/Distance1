@@ -18,7 +18,7 @@ Debut
 	finpour
 
 	ecrire("donner la valeur et la position")
-	lire(x, n)
+	lire(x, pos)
 	n <-- n + 1
 	Redim(tab[n])
 
