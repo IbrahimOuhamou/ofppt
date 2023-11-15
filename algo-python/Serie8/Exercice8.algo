@@ -1,0 +1,59 @@
+//BismiAllah
+
+Variables n: entier
+tableau T: entier
+
+procedure REMPLIR(T[] :entier, n: entier)
+	variables i: entier
+	debut
+		pour i allent de 0 jusqu'a n - 1
+			ecrire("Donner un valeur")
+			lire(T[i])
+		finpour
+	finprocedure
+
+procedure AFFICHER(T[]: entier) 
+	variables i: entier
+	debut
+		pour i allent de 0 jusqu'a n - 1
+			ecrire(T[i], " ")
+		finpour
+	finprocedure
+
+fonction RECH_MAX(T[]: entier, n: entier) : entier
+	variables max, i : entier
+	debut
+		max <-- T[0]
+		pour i allent de 0 jusqu'a n - 1
+			Si (T[i] > max) alors
+				max <--  T[i]
+			finsi
+		finpour
+		retourne max
+	finfonction
+
+
+fonction RECH_MIN(T[]: entier, n: entier) : entier
+	variables min, i : entier
+	debut
+		min <-- T[0]
+		pour i allent de 0 jusqu'a n - 1
+			Si (T[i] < min) alors
+				min <--  T[i]
+			finsi
+		finpour
+		retourne max
+	finfonction
+
+debut
+	ecrire("donner taille du tableau")
+	lire(n)
+  Redim(T[n])
+	
+	REMPLIR(T, n)
+  ecrire("max = ", RECH_MAX(T, n))
+  ecrire("min = ", RECH_MIN(T, n))
+  ecrire("le tableau est: ")
+  AFFICHER(T, n)
+fin
+
