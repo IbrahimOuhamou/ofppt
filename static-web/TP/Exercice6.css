@@ -1,0 +1,41 @@
+/*in the name of Allah*/
+
+header
+{
+    background-color: violet;
+    text-align: center;
+    height: 70px;
+}
+
+section
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+}
+
+
+#art1
+{
+    margin: 5px;
+    background-color: aqua;
+    order: 2;
+    flex: 1;
+}
+
+#art2
+{
+    margin: 5px;
+    background-color: aqua;
+    order: 3;
+    flex: 5;
+}
+
+#art3
+{
+    margin: 5px;
+    background-color: aqua;
+    order: 1;
+    flex: 1;
+}
+

@@ -1,0 +1,65 @@
+/*in the name of Allah*/
+
+*
+{
+    text-align: center;
+    color: white;
+}
+
+#upper
+{
+    background-color: yellow;
+    display: flex;
+    justify-content: space-between;
+}
+
+#upper_logo
+{
+    background-color: black;
+    border-radius: 20px;
+    width: 5%;
+}
+
+#upper_links
+{
+    background-color: black;
+    width: 20%;
+}
+
+#middle
+{
+    background-color: black;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 50vh;
+}
+
+#navigation
+{
+    background-color: aqua;
+    width: 20%;
+}
+
+#middle_right
+{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+article
+{
+    background-color: blue;
+    width: 30%;
+    margin: 5px;
+    border-radius: 8px;
+}
+
+#bottom
+{
+    width: 100vw;
+    background-color: orange;
+}
+
