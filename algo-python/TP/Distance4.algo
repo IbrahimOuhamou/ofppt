@@ -4,24 +4,21 @@
 
 Variables
 	phrase :chaine de characteres
-	n, i :entier
+	c, i :entier
 
 
 Debut
 	ecrire("donner une phrase")
 	lire(phrase)
-	n <-- 0
+	c <-- 0
 	pour i allent de 0 jusqu'a len(phrase)
 		si (mid(phrase, i, 1) = ' ') alors
-			n <-- n+1
+			c <-- c+1
 		finsi
 	finpour
 
-	//pour le dernier mot
-	si(len(phrase) <> 0)
-		n <-- n + 1
-	finsi
-	
-	ecrire("votre phrase a ", n, " mots")
+	ecrire("votre phrase a ", c + 1, " mots")
+Fin
 
+phrase = "bonjour ca va Ibrahim"
 
