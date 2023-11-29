@@ -8,11 +8,11 @@ debut
         ecrire("donner un verbe")
         lire(ch)
     jusqu'a (right(ch, 2) = "er")
-    ecrire(left(ch, len(ch) - 2), "e")
-    ecrire(left(ch, len(ch) - 2), "es")
-    ecrire(left(ch, len(ch) - 2), "e")
-    ecrire(left(ch, len(ch) - 2), "ion")
-    ecrire(left(ch, len(ch) - 2), "ez")
-    ecrire(left(ch, len(ch) - 2), "ent")
+    ecrire("Je ", left(ch, len(ch) - 2), "e")
+    ecrire("Tu ", left(ch, len(ch) - 2), "es")
+    ecrire("Il/Elle ", left(ch, len(ch) - 2), "e")
+    ecrire("Nous ", left(ch, len(ch) - 2), "ion")
+    ecrire("Vous ", left(ch, len(ch) - 2), "ez")
+    ecrire("Ils/Elles ", left(ch, len(ch) - 2), "ent")
 fin
 
