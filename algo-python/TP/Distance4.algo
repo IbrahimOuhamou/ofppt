@@ -1,0 +1,27 @@
+/*in the name of Allah*/
+
+//mombre de mots dans une phrase
+
+Variables
+	phrase :chaine de characteres
+	n, i :entier
+
+
+Debut
+	ecrire("donner une phrase")
+	lire(phrase)
+	n <-- 0
+	pour i allent de 0 jusqu'a len(phrase)
+		si (mid(phrase, i, 1) = ' ') alors
+			n <-- n+1
+		finsi
+	finpour
+
+	//pour le dernier mot
+	si(len(phrase) <> 0)
+		n <-- n + 1
+	finsi
+	
+	ecrire("votre phrase a ", n, " mots")
+
+
