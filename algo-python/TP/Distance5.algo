@@ -1,0 +1,17 @@
+/*in the name of Allah*/
+
+
+Variables ch : chaine de characters
+	i :entier
+
+debut
+	repeter
+		ecrire("donner une chaine de characteres")
+		lire(ch)
+	jusqu'a (len(ch) > 3)
+
+	pour i allent de 1 jusqu'a len(ch)
+		left(ch, i)
+	finpour
+fin
+
