@@ -11,7 +11,7 @@ debut
 	jusqu'a (len(ch) > 3)
 
 	pour i allent de 1 jusqu'a len(ch)
-		left(ch, i)
+		ecrire(left(ch, i))
 	finpour
 fin
 

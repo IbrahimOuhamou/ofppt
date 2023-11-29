@@ -1,0 +1,29 @@
+//in tha name of Allah
+
+
+Variables   ch: chaine de caractere
+            nombre_de_voyels: entier
+
+fonction voyels(ch: chaine de caracter)
+variables c: character
+          n, i: entier
+debut
+    n <- 0
+    pour i allent de 0 jusqu'a len(ch)
+        c <- mid(ch, i, 1)
+        si (c = 'a' ou c = 'e' ou c = 'i' ou c = 'o' ou c = 'u' ou c = 'y') alors
+            n <- n + 1
+        finsi
+    finpour
+    retourn n
+finfonction
+
+debut
+    ecrire("entrer une chaine")
+    lire(ch)
+
+    nombre_de_voyels <- voyels(ch)
+
+    ecrire("votre chaine a ", nombre_de_voyels, " voyels")
+fin
+
