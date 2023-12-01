@@ -1,0 +1,29 @@
+/*in the name of Allah*/
+
+body
+{
+    font-family: sans; 
+}
+
+#center_div
+{
+    border: 1;
+    border-color: darkblue;
+    border-style: solid;
+    border-radius: 30px;
+
+    height: 400px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+
+#center_text
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+

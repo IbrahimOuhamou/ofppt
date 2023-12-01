@@ -1,0 +1,24 @@
+/*in the name of Allah*/
+
+p{color:blue;}
+
+@media screen and (max-width:1000px)
+{
+    body
+    {
+        background-color: darkblue;
+    }
+    p
+    {
+        color: white;
+    }
+}
+
+@media screen and (min-width:1001px)
+{
+    body
+    {
+        background-color: black;
+    }
+}
+

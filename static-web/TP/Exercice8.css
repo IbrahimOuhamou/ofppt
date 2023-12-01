@@ -8,6 +8,8 @@ body
 ul
 {
     display: flex;
+    flex-direction: row;
+
     justify-content: space-around;
     color: white;
 }
@@ -18,11 +20,25 @@ a
     text-decoration: none;
 }
 
+a:hover
+{
+    font-size:xx-small;
+}
+
 li
 {
     background-color: rgb(0, 0, 100);
     border-radius: 10px;
+    padding: 50px;
     font-size: large;
-    padding: 10px;
 }
+
+@media screen and (max-width:1000px)
+{
+    ul
+    {
+        flex-direction: column;
+    }
+}
+
 
