@@ -1,4 +1,47 @@
 /*in the name of Allah*/
 
+header
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    background-color: black;
+}
+
+#header_right
+{
+    background-image: url("files/menu_droit.png");
+    height: 270px;
+    width: 230px;
+    text-align: center;
+    z-index: 2;
+}
+
+#header_right > p
+{
+    border-width: 0;
+    border-bottom-width: 3px;
+    border-style: solid;
+    border-color: black;
+}
+
+#sous_header
+{
+    background-image: url("files/sousHeader.png");
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+    z-index: 0;
+
+    height: 232px;
+
+    position: relative;
+    bottom: 34px;
+}
+
+#sous_header > img
+{
+    z-index: 3;
+}
 
 
