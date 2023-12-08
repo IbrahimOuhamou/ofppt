@@ -64,6 +64,13 @@ img[src = "files/video.png"]
 {
     position: relative;
     left: 10px;
+    z-index: 2;
+}
+
+img[src = "files/bloc5.png"]
+{
+    position: relative;
+    bottom: 130px;
 }
 
 img[src = "files/bg.png"]
@@ -82,5 +89,6 @@ img[src = "files/footer.png"]
     bottom: 0;
     left: 0;
     width: 100vw;
+    z-index: 5;
 }
 
