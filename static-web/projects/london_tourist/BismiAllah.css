@@ -1,11 +1,21 @@
 /*in the name of Allah*/
 
+#div_body
+{
+    position: absolute;
+    left: 20.34vw;
+    width: 59.5vw;
+    height: max-content;
+    /*height: 1023px;*/
+}
+
 header
 {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    background-color: black;
+    background-image: url("files/header.png");
+    z-index: 5;
 }
 
 #header_right
@@ -14,7 +24,7 @@ header
     height: 270px;
     width: 230px;
     text-align: center;
-    z-index: 2;
+    z-index: 3;
 }
 
 #header_right > p
@@ -44,4 +54,33 @@ header
     z-index: 3;
 }
 
+#video
+{
+    position: relative;
+    left: 50px;
+}
+
+img[src = "files/video.png"]
+{
+    position: relative;
+    left: 10px;
+}
+
+img[src = "files/bg.png"]
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    height: 100vh;
+    width: 100vw;
+}
+
+img[src = "files/footer.png"]
+{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100vw;
+}
 
