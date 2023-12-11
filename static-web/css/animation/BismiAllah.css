@@ -1,0 +1,12 @@
+/*in the name of Allah*/
+
+p
+{
+    transition: height 1s;
+}
+
+p:hover
+{
+    height: 10000px;
+}
+
