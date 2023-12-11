@@ -1,0 +1,83 @@
+/*in the name of Allah*/
+
+header
+{
+    background-color: purple;
+    text-align: center;
+    color: white;
+    width: 100vw;
+    height: 10vh;
+}
+
+header > h1
+{
+    margin: 0;
+}
+
+#middle
+{
+    display: flex;
+    width: 100vw;
+    height: 80vh;
+}
+
+#middle_left
+{
+    width: 20%;
+    background-color: lightgreen;
+}
+
+#middle_left > a 
+{
+    background-color: darkgreen;
+    border-radius: 10px;
+    color: white;
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+#middle_center
+{
+    background-color: yellow;
+    width: 60%;
+}
+
+#middle_right
+{
+    background-color: pink;
+    width: 20%;
+}
+
+footer
+{
+    height: 10vh;
+    background-color: purple;
+    width: 100vw;
+}
+
+@media screen and (max-width: 1000px) {
+    #middle
+    {
+        flex-wrap: wrap;
+        width: 100vw;
+    }
+
+    #middle_left
+    {
+        width: 20%;
+    }
+
+    #middle_center
+    {
+        width: 80%;
+    }
+
+    #middle_right
+    {
+        width: 100vw;
+    }
+}
+
+
