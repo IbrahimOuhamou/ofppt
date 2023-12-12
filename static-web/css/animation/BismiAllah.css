@@ -2,11 +2,15 @@
 
 p
 {
-    transition: height 1s;
+    width: 200px;
+    height: 40px;
+    transition: height 5s;
+    background-color: blue;
+    color: white;
 }
 
 p:hover
 {
-    height: 10000px;
+    width: 100px;
 }
 
