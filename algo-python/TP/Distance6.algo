@@ -1,12 +1,12 @@
 //in the name of Allah
 
-varibales n, i: entier
+varibales n, i, indx, pays, population: entier
 Tableau T[]: ville
 
 structure ville
     nom: chaine de caractere
     population: entier
-    paye: chaine de caractere
+    pays: chaine de caractere
 finstructure
 
 debut
@@ -17,6 +17,32 @@ debut
     redim(T[], n)
 
     pour i allent de 0 jusqu'a n-1
+        ecrire("donner le nom de ville: ")
+        lire(T[i].nom)
+        ecrire("donner la population de ville: ")
+        lire(T[i].population)
+        ecrire("donner le nom du pays: ")
+        lire(T[i].pays)
     finpour
+
+    ecrire("donner le nom d'un pays")
+    lire(pays)
+    
+    population <- 0
+    pour i allent de 0 jusqu'a n-1
+        si (T[i].pays = pays) alors
+            population <- population + T[i].population
+        finsi
+    finpour
+    ecrire(pays, " a ", population, " peuples")
+
+    indx <- 0
+    pour i allent de 0 jusqu'a n-1
+        si (T[i].population > T[indx].population) alors
+            indx <- i
+        finsi
+    finpour
+    ecrire("la ville plus peuple est: ", T[indx].nom)
+
 fin
 
