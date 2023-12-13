@@ -36,10 +36,10 @@ debut
         lire(T[i].adresse)
     finpour
 
-    //nom adhere depuis 2000
+    //nom adherons depuis 2000
     pour i allent de 0 jusqu'a 150
-        si (T[i].date_adhesion < 2000) alors
-            ecrire(T[i].nom)
+        si (T[i].date_adhesion.anne < 2000) alors
+            ecrire(T[i].nom, " ", T[i].prenom)
         finsi
     finpour
 
