@@ -1,0 +1,29 @@
+//in the name of Allah
+
+variables ET: Etudient
+
+structure mon_structure
+    Nom: chaine de caracteres
+    Prenom: chaine de caracter
+    Age: entier
+    Filier: chaine de caractere
+finstructure
+
+debut
+    ecrire("in the name of Allah")
+    ecrire("Donner votre Nom:")
+    lire(ET.Nom)
+    ecrire("Donner votre Prenom:")
+    lire(ET.Prenom)
+    ecrire("Donner votre Age:")
+    lire(ET.Age)
+    ecrire("Donner votre Filier:")
+    lire(ET.Filier)
+
+    ecrire("votre informations:")
+    ecrire("votre Nom: ", ET.Nom)
+    ecrire("votre Prenom: ", ET.Prenom)
+    ecrire("votre Age: ", ET.Age)
+    ecrire("votre Filier: ", ET.Filier)
+fin
+

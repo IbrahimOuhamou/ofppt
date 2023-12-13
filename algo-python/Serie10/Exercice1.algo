@@ -1,0 +1,31 @@
+//in the name of Allah
+
+Variables ET: Etudient
+
+structure
+    nom: chaine de caracteres
+    prenom: chaine de caracteres
+    note1: entier
+    note2: entier
+    note3: entier
+finstructure
+
+debut
+    ecrire("in the name of Allah")
+    ecrire("donner votre nom: ")
+    lire(ET.nom)
+    ecrire("donner votre prenom: ")
+    lire(ET.prenom)
+    ecrire("donner votre 1er note: ")
+    lire(ET.note1)
+    ecrire("donner votre 2em note: ")
+    lire(ET.note2)
+    ecrire("donner votre 3em note: ")
+    lire(ET.note3)
+
+
+    ecrire("nom: ", ET.nom)
+    ecrire("prenom: ", ET.prenom)
+    ecrire("moyenne: ", (ET.note1 + ET.note2 + ET.note3)/3)
+fin
+
