@@ -1,0 +1,76 @@
+//in the name of Allah
+
+Variables i, j, indx: entier
+          prsn: personne
+Tableau T[150]: personne
+
+structure Date
+    jour: entier
+    mois: entier
+    annee: entier
+finstructure 
+
+structure personne
+    nom: chaine de caractere
+    prenom: chaine de caractere
+    age: entier
+    date_adhesion: Date
+    num_tel: entier
+    adresse: chaine de caractere
+finstructure 
+
+debut
+    ecrire("in the name of Allah")
+    
+    //saisir des informations
+    pour i allent de 0 jusqu'a 150
+        ecrire("donner le nom du person:")
+        lire(T[i].nom)
+        ecrire("donner le prenom du person:")
+        lire(T[i].prenom)
+        ecrire("donner l'age du person:")
+        lire(T[i].age)
+        ecrire("donner la date d'adhesion (jour mois annee):")
+        lire(T[i].date_adhesion.jour, T[i].date_adhesion.mois, T[i].date_adhesion.annee)
+        ecrire("donner l'adresse:")
+        lire(T[i].adresse)
+    finpour
+
+    //nom adhere depuis 2000
+    pour i allent de 0 jusqu'a 150
+        si (T[i].date_adhesion < 2000) alors
+            ecrire(T[i].nom)
+        finsi
+    finpour
+
+    //nom commencent par 'B'
+    pour i allent de 0 jusqu'a 150
+        si (mid(T[i].nom, 0, 1) = 'B') alors
+            ecrire(T[i].nom)
+        finsi
+    finpour
+
+    //tri des personnes
+    pour i allent de 0 jusqu'a 149
+        indx <- i
+        pour j allent de i jusqu'a 150
+            si(T[indx].age < T[j].age)
+                indx <-j
+            finsi
+        finpour
+        prsn <- T[i]
+        T[i] <- T[indx]
+        T[indx] <- prsn
+    finpour
+    //affiche
+    pour i allent de 0 jusqu'a 150
+        ecrire("nom: ", T[i].nom)
+        ecrire("prenom: ", T[i].prenom)
+        ecrire("age: ", T[i].age)
+        ecrire("date d'adhesion: ", T[i].date_adhesion.jour, "/", T[i].date_adhesion.mois, "/", T[i].date_adhesion.anne)
+        ecrire("tel: ", num_tel)
+        ecrire("adresse: ", adresse)
+    finpour
+
+fin
+
