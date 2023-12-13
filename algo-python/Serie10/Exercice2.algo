@@ -2,7 +2,7 @@
 
 Variables i, j, indx: entier
           prsn: personne
-Tableau T[150]: personne
+Tableau T[149]: personne
 
 structure Date
     jour: entier
@@ -23,7 +23,7 @@ debut
     ecrire("in the name of Allah")
     
     //saisir des informations
-    pour i allent de 0 jusqu'a 150
+    pour i allent de 0 jusqu'a 149
         ecrire("donner le nom du person:")
         lire(T[i].nom)
         ecrire("donner le prenom du person:")
@@ -37,14 +37,14 @@ debut
     finpour
 
     //nom adherons depuis 2000
-    pour i allent de 0 jusqu'a 150
+    pour i allent de 0 jusqu'a 149
         si (T[i].date_adhesion.anne < 2000) alors
             ecrire(T[i].nom, " ", T[i].prenom)
         finsi
     finpour
 
     //nom commencent par 'B'
-    pour i allent de 0 jusqu'a 150
+    pour i allent de 0 jusqu'a 149
         si (mid(T[i].nom, 0, 1) = 'B') alors
             ecrire(T[i].nom)
         finsi
@@ -53,7 +53,7 @@ debut
     //tri des personnes
     pour i allent de 0 jusqu'a 149
         indx <- i
-        pour j allent de i jusqu'a 150
+        pour j allent de i jusqu'a 149
             si(T[indx].age < T[j].age)
                 indx <-j
             finsi
@@ -63,7 +63,7 @@ debut
         T[indx] <- prsn
     finpour
     //affiche
-    pour i allent de 0 jusqu'a 150
+    pour i allent de 0 jusqu'a 149
         ecrire("nom: ", T[i].nom)
         ecrire("prenom: ", T[i].prenom)
         ecrire("age: ", T[i].age)

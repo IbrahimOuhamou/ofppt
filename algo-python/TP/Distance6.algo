@@ -1,0 +1,22 @@
+//in the name of Allah
+
+varibales n, i: entier
+Tableau T[]: ville
+
+structure ville
+    nom: chaine de caractere
+    population: entier
+    paye: chaine de caractere
+finstructure
+
+debut
+    ecrire("in the name of Allah")
+
+    ecrire("donner le nombre de villes")
+    lire(n)
+    redim(T[], n)
+
+    pour i allent de 0 jusqu'a n-1
+    finpour
+fin
+
