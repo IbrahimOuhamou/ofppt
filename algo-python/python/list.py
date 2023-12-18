@@ -52,3 +52,11 @@ print("list[2:]", list[2:])
 print("list[:2]", list[:2])
 print("list[-2:]", list[-2:])
 
+squares= []
+for x in range(10):
+    squares.append(x**2)
+print("squares:", squares)
+
+squares = [x**2 for x in range(10)]
+print("squares:", squares)
+
