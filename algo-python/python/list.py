@@ -45,3 +45,10 @@ print("list:", list)
 T.clear()
 list.clear()
 
+list = [5, 43, 53, 53, 22, 222, 5552, 9]
+
+print("list:", list)
+print("list[2:]", list[2:])
+print("list[:2]", list[:2])
+print("list[-2:]", list[-2:])
+
