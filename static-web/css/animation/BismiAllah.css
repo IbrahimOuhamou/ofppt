@@ -4,13 +4,16 @@ p
 {
     width: 200px;
     height: 40px;
-    transition: height 5s;
     background-color: blue;
     color: white;
 }
 
 p:hover
 {
-    width: 100px;
+    /*transform: scale(2, 3);*/
+    height: 80px;
+    width: 400px;
+    /*transition: height 5s, width 5s;*/
+    transition: height 1s, width 0.8s;
 }
 
