@@ -15,5 +15,33 @@ p:hover
     width: 400px;
     /*transition: height 5s, width 5s;*/
     transition: height 1s, width 0.8s;
+    animation-name: alhamdo_li_Allah;
+    animation-duration: 5s;
+}
+
+@keyframes alhamdo_li_Allah
+{
+    from {background-color: blue;}
+    50% {background-color: white;}
+    to {background-color: grey;}
+}
+
+#la_ilaha_illa_Allah
+{
+    background-color: blue;
+    color: white;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    animation-name: la_ilaha_illa_Allah;
+    animation-duration: 2s;
+    animation-iteration-count: 5;
+}
+
+@keyframes la_ilaha_illa_Allah
+{
+    from {top: 0; left: 0;}
+    25% {top: -20px; left: -20px;}
+    to {top: 100px; left: 100px;}
 }
 
