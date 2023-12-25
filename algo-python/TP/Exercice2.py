@@ -7,7 +7,7 @@ def greaters_sum(list):
     L = [0 for i in range(len(list))]
 
     for i in range(len(list)):
-        for j in range(i, len(list)):
+        for j in range(0, len(list)):
             if list[j] > list[i]:
                 L[i] += 1
 
