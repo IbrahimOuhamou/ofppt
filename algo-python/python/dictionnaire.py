@@ -5,7 +5,8 @@ print("بسم الله الرحمن الرحيم")
 dict = {'key':'value', 'key1':'value1', 'key2':'valu2', 'key3':'value3'}
 print(dict)
 
-dict["key1"] = 'value11'
+dict.update({"updated key","updated value"})
+
 for elm in dict:
     print(elm)
     print(dict[elm])
