@@ -14,7 +14,6 @@ for elm in dict:
 for elm in dict.keys():
     print(elm)
 
-
 for value in dict.items():
     print(value)
 
