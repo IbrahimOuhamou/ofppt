@@ -59,4 +59,19 @@ print("squares:", squares)
 
 squares = [x**2 for x in range(10)]
 print("squares:", squares)
+squares.clear()
+
+print("\n\n******************2d list****************\n\n")
+
+list = [[2, 3, 46, 28], [53, -3, 3, 3]]
+for i in range(len(list)):
+    for j in range(len(list[i])):
+        print(list[i][j], end=" ")
+    print("")
+
+list = [[i ** j for j in range(3)] for i in range (4)]
+for i in range(len(list)):
+    for j in range(len(list[i])):
+        print(list[i][j], end=" ")
+    print("")
 
