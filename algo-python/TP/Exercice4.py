@@ -14,7 +14,8 @@ voyels = "aeiouy"
 for c in ch:
     if c.isupper():
         uppers += 1
-    if c.islower():
+    #if c.islower():
+    else:
         lowers += 1
 
 ch = ch.lower()
