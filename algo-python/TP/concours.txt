@@ -1,0 +1,3 @@
+53;Aymen;Omari;23;admi
+35;Ahmed;Azrak;19;admi
+532;Amin;imad;40;refuse

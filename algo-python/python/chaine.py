@@ -23,7 +23,18 @@ print("'الله', starts at index", ch.find("الله"))
 
 print(ch.isalpha())
 print(ch.isdigit())
-print(ch.space())
+print(ch.isspace())
 print(ch.isupper())
 print(ch.islower())
+
+print("************list******************")
+list = ['a', 'b', 'c', 'd', 'e']
+ch = ':'.join(list)
+print(ch)
+
+ch = "a;b;c;a;b;c"
+list = ch.split(';')
+print(list)
+del list
+print(list("bismiAllah"))
 
