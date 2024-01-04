@@ -14,7 +14,8 @@ def saisir(file):
     file.write(input("donner la decision (admi, refuse, ajourne): "))
     file.write('\n')
 
-def admis(file):
+def admis():
+    file = open("concours.txt", "r")
     admis = open("admis.txt", "w")
     file_lines = file.readlines()
     for i in range(len(file_lines)):
@@ -25,6 +26,18 @@ def admis(file):
             admis.write(data[0]+";"+data[1]+";"+data[2]+";"+data[3]+"\n")
     admis.close()
 
+def attente():
+    file = open("admis.txt", "r")
+    attents = open("attente.txt", "w")
+    file_lines = file.readlines()
+    for i in range(len(file_lines)):
+        file_lines[i] = file_lines[i].split(";")
+    for data in file_lines:
+        age = int(data[3][:-1])
+        if age > 30:
+            attents.write(";".join(data))
+    file.close()
+    attents.close()
 
 data = open("concours.txt", "w")
 
@@ -33,12 +46,6 @@ for i in range(n):
     saisir(data)
 data.close()
 
-print("\n********file content*****")
-data = open("concours.txt", "r")
-lines = data.readlines()
-print(lines)
-data.close()
-print("********file end*********")
-
-admis(open("concours.txt", "r"))
+admis()
+attente()
 
