@@ -12,6 +12,7 @@ finstructure
 debut
     ecrire("donner la taille de tableau")
     lire(n)
+    redim(T[n])
     pour i allent de 0 jusqu'a n-1
         ecrire("donner le nom, population et pays")
         lire(T[i].nom, T[i].population, T[i].pays)
