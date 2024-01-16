@@ -1,6 +1,7 @@
 in the name of Allah
 
-variables n, i :entier
+variables n, i, population_total, max_index :entier
+          nom :chaine
 tableau T[] :ville
 
 structure ville
@@ -17,5 +18,24 @@ debut
         ecrire("donner le nom, population et pays")
         lire(T[i].nom, T[i].population, T[i].pays)
     finpour
+    
+    index_max <-- 0
+    population_total <-- 0
+    ecrire("donner le nom d'une ville")
+    lire(nom)
+    pour i allent de 0 jusqu'a n-1
+        si(nom = T[i].pays) alors
+            population_total <-- population_total + T[i].population
+        finsi
+
+        si (T[i].population > T[max_index].population)
+            max_index <-- i
+        finsi
+    finpour
+
+    ecrire("la population total est: ", population_total)
+
+    ecrire("la ville la plus peuple est: ", T[max_index].nom, "de population ", T[max_index].population)
+
 fin
 
