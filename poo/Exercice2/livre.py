@@ -26,3 +26,7 @@ class livre:
         else:
             return 3
 
+    @staticmethod
+    def compter1():
+        print('le nombre des instances', livre.counter)
+
