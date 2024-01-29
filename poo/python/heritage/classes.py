@@ -6,7 +6,6 @@ class etre_vivant():
     def respirer(self):
         print("respirer")
 
-
 class person():
     def __init__(self, nom1, cin1, date_naissance1):
         self.nom = nom1
@@ -21,12 +20,14 @@ class person():
         return a
 
 class etudiant(etre_vivant, person):
+    __nom = None
     def __init__(self, n_cellules, nom1, cin1, date_naissance1, note1, note2):
         #super().__init__(nom1, cin1, date_naissance1):
         person.__init__(self, nom1, cin1, date_naissance1)
         etre_vivant.__init__(self, n_cellules)
         self.note1 = note1
         self.note2 = note2
+        self.__nome = self.nom
 
     def afficher(self):
         super().afficher()
