@@ -8,4 +8,6 @@ if __name__ == '__main__':
     print("")
     S1.affichage()
     print("")
-    print("le salaire de", S1._nom, "est", S1.calcule_salaire())
+    print("le salaire de", S1.get_nom(), "est", S1.calcule_salaire())
+    print("")
+    S1.set_salaire(1200)
