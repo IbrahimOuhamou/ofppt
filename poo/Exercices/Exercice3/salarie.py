@@ -24,7 +24,7 @@ class salarie():
         print("nom :", self.__nom)
         print("salaire :", self.__salaire)
 
-    def get_salaire(self, s):
+    def set_salaire(self, s):
         self.__salaire = s
 
     def get_nom(self):
