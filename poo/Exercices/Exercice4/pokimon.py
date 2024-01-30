@@ -7,7 +7,7 @@ class pokimon():
     def vitesse(self):
         pass
     def __str__(self):
-        return "je suis le pokimon " + str(self.nom) + " mon poids est " + str(self.poids)
+        return "je suis le pokimon " + str(self.nom) + " mon poids est " + str(self.poids) + "kg"
 
 class pokimon_sportif(pokimon):
     def __init__(self, nom, poids, n_pattes, freq_cardique):
@@ -17,7 +17,7 @@ class pokimon_sportif(pokimon):
     def vitesse(self):
         return self.poids * self.taille * 3
     def __str__(self):
-        return pokimon.__str__(self) + " mon nombre des pattes est " + str(self.n_pattes) + " ma frequance cardique est " + str(self.freq_cardique)
+        return pokimon.__str__(self) + " mon nombre des pattes est " + str(self.n_pattes) + " ma frequance cardique est " + str(self.freq_cardique) + " ma vitesse est " + str(self.vitesse())
 
 class pokimon_casanier(pokimon):
     def __init__(self, nom, poids, n_pattes, taille, regarde_temps):
@@ -28,7 +28,7 @@ class pokimon_casanier(pokimon):
     def vitesse(self):
         return self.n_pattes * self.taille * 3
     def __str__(self):
-        return pokimon.__str__(self) + " mon nombre des pattes est " + str(self.n_pattes) + " ma taille est " + str(self.taille) + " mon temps de regard " + str(self.regarde_temps)
+        return pokimon.__str__(self) + " mon nombre des pattes est " + str(self.n_pattes) + " ma taille est " + str(self.taille) + "m mon temps de regard " + str(self.regarde_temps) + " ma vitesse est " + str(self.vitesse())
 
 class pokimon_mer(pokimon):
     def __init__(self, nom, poids, nageoire):
@@ -37,5 +37,5 @@ class pokimon_mer(pokimon):
     def vitesse(self):
         return self.poids / 25 * self.nageoire
     def __str__(self):
-        return pokimon.__str__(self) + " mon nombre des pattes est " + str(self.n_pattes) + " nageoire " + str(self.nageoire)
+        return pokimon.__str__(self) + " mon nombre des pattes est " + str(self.n_pattes) + " nageoire " + str(self.nageoire) + " ma vitesse est " + str(self.vitesse())
 
