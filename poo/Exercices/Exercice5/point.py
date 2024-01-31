@@ -1,8 +1,8 @@
 #in the name of Allah
 
 class point_t():
-    point_t.nb = 0
-    def __init__(self, abs=0, abs=0):
+    nb = 0
+    def __init__(self, abs=0, ord=0):
         self.__abs = abs
         self.__ord = ord
         point_t.nb += 1
