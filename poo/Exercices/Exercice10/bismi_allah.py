@@ -35,6 +35,35 @@ entry_result.place(x=100, y=140)
 
 def clear():
     entry_number1.delete(0, tk.END)
+    entry_number2.delete(0, tk.END)
+    entry_operation.delete(0, tk.END)
+    entry_result.config(state="normal")
+    entry_result.delete(0, tk.END)
+    entry_result.config(state="disabled")
+
+def calculate():
+    n1 = int(entry_number1.get())
+    n2 = int(entry_number2.get())
+    operation = entry_operation.get()
+    result = 0
+    
+    if operation == "**":
+        result = n1 ** n2
+    elif operation == "*":
+        result = n1 * n2
+    elif operation == "//":
+        result = n1 // n2
+    elif operation == "/":
+        result = n1 / n2
+    elif operation == "-":
+        result = n1 - n2
+    elif operation == "+":
+        result = n1 + n2
+
+    entry_result.config(state="normal")
+    entry_result.insert(0, result)
+    entry_result.config(state="disabled")
+
 
 button_clear.config(command=clear)
 button_calculate.config(command=calculate)
