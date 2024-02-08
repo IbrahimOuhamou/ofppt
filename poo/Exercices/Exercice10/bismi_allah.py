@@ -61,6 +61,7 @@ def calculate():
         result = n1 + n2
 
     entry_result.config(state="normal")
+    entry_result.delete(0, tk.END)
     entry_result.insert(0, result)
     entry_result.config(state="disabled")
 
