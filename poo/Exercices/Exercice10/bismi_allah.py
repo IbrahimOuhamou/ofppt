@@ -33,6 +33,12 @@ label_result.place(x=20, y=140)
 entry_result = tk.Entry(app, state="disabled")
 entry_result.place(x=100, y=140)
 
+def clear():
+    entry_number1.delete(0, tk.END)
+
+button_clear.config(command=clear)
+button_calculate.config(command=calculate)
+
 app.mainloop()
 
 
