@@ -63,9 +63,16 @@ def calculate():
     entry_result.insert(0, result)
     entry_result.config(state="disabled")
 
+def validate_insert(char):
+    return char.isdigit()
+validation = app.register(validate_insert)
+
+entry_number1.config(validate="key" ,validatecommand=(validation, '%S'))
+entry_number2.config(validate="key" ,validatecommand=(validation, '%S'))
 
 button_clear.config(command=clear)
 button_calculate.config(command=calculate)
+
 
 app.mainloop()
 
