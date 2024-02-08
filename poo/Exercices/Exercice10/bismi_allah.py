@@ -13,10 +13,8 @@ label_number1.place(x=20, y=30)
 entry_number1 = tk.Entry(app)
 entry_number1.place(x=100, y=30)
 
-label_operation = tk.Label(app, text="operation")
-label_operation.place(x=20, y=50)
 entry_operation = tk.Entry(app)
-entry_operation.place(x=160, y=50, width=20)
+entry_operation.place(x=160, y=55, width=20)
 
 label_number2 = tk.Label(app, text="number2:")
 label_number2.place(x=20, y=80)
