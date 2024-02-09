@@ -28,6 +28,7 @@ def clear():
 
 def connect():
     if login_entry_name.get() != "User" or login_entry_password.get() != "123":
+        tk.Label(login_window, text="mot de pass incorrect", fg="red").place(x=80, y=90)
         return
     print("alhamdo li Allah")
     login_window.destroy()
