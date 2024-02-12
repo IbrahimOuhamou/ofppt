@@ -1,6 +1,7 @@
 #in the name of Allah
 
 import tkinter as tk
+import PIL
 
 print("in the name of Allah")
 
