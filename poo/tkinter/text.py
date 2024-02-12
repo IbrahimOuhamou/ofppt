@@ -14,7 +14,7 @@ text.place(x=100, y=10)
 def text_clear():
     text.delete(0.0, tk.END)
 
-tk.Butoon(app, text="la ilaha illa ALlah", command=text_clear).place(x=100, y=40)
+tk.Button(app, text="la ilaha illa Allah", command=text_clear).place(x=100, y=180)
 
 app.mainloop()
 
