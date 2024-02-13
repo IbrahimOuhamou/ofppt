@@ -1,0 +1,16 @@
+#in the name of Allah
+
+class livre_t():
+    def __init__(self, code, titre, nom_auteur, date_edition, editeur, pages):
+        self.code = code
+        self.titre = titre
+        self.nom_auteur = nom_auteur
+        self.date_edition = date_edition
+        self.editeur = editeur
+        self.pages = pages
+
+    def __str__(self):
+        return "code " + self.code + "\n" + "titre: " + self.title + "\nnom d'auteur: " + self.nom_auteur + "\ndate edition: " + self.date_edition + "\nediteur: " + self.editeur + "\npages: " + self.pages
+
+
+
