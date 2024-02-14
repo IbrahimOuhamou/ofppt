@@ -10,7 +10,14 @@ class etagere_t():
 
     def ajouter(self, livre):
         print("Allah forgive me")
-        if self.max < len(self.liste):
+        if self.max > len(self.liste):
             self.liste.append(livre)
+        else:
+            print("le nombre max a ete surpasse")
+
+    def get_livre(self, pos):
+        if self.max < pos:
+            return None
+        return self.liste[pos]
 
 
