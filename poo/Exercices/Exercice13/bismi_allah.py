@@ -24,5 +24,7 @@ print("================================================================")
 etagere.enleve_livre(2)
 print(etagere.liste)
 
+etagere.enleve_livre_auteur("la ilaha illa Allah")
+print(etagere.liste)
 
 

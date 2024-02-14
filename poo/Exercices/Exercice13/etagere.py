@@ -44,10 +44,12 @@ class etagere_t():
     def enleve_livre(self, pos):
         if pos > len(self.liste):
             return
-#        for i in range(pos-1, len(self.liste) - 1):
-#            self.liste[i] = self.liste[i+1]
-#        del self.liste[len(self.liste) - 1]
         del self.liste[pos - 1]
+
+    def enleve_livre_auteur(self, auteur):
+        l = self.chercher_auteur(auteur)
+        for i in l:
+            self.liste.remove(i)
 
 
 
