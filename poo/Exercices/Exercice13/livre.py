@@ -10,7 +10,7 @@ class livre_t():
         self.pages = pages
 
     def __str__(self):
-        return "code " + self.code + "\n" + "titre: " + self.titre + "\nnom d'auteur: " + self.nom_auteur + "\ndate edition: " + self.date_edition + "\nediteur: " + self.editeur + "\npages: " + self.pages
+        return "code " + self.code + "titre: " + self.titre + "nom d'auteur: " + self.nom_auteur + "date edition: " + self.date_edition + "editeur: " + self.editeur + "pages: " + self.pages
 
 
 
