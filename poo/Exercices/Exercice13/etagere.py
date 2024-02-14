@@ -18,6 +18,7 @@ class etagere_t():
     def get_livre(self, pos):
         pos -= 1
         if pos > len(self.liste) :
+            print("pos invalid")
             return None
         return self.liste[pos]
     
