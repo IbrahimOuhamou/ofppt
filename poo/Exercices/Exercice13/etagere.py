@@ -16,7 +16,7 @@ class etagere_t():
             print("le nombre max a ete surpasse")
 
     def get_livre(self, pos):
-        if self.max < pos:
+        if self.max <= pos:
             return None
         return self.liste[pos]
 
