@@ -11,7 +11,13 @@ etagere = etagere_t(8, [livre_t("la ilaha illa Allah", "la ilaha illa Allah", "l
 
 etagere.ajouter(livre_t("la ilaha illa Allah", "la ilaha illa Allah", "la ilaha illa Allah", "la ilaha illa Allah", "la ilaha illa Allah", "la ilaha illa Allah"))
 
+print("================================================================")
 print(etagere.get_livre(1))
 print(etagere.get_livre(2))
 print(etagere.get_livre(3))
+print("================================================================")
+print(get_livre(etagere.chercher("la ilaha illa Allah", "la ilaha illa Allah"))
+
+
+
 

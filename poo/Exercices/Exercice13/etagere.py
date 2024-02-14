@@ -16,8 +16,16 @@ class etagere_t():
             print("le nombre max a ete surpasse")
 
     def get_livre(self, pos):
-        if self.max <= pos:
+        pos -= 1
+        if pos > len(self.liste) :
             return None
         return self.liste[pos]
+    
+    def chercher(self, titre, auteur):
+        return_liste = []
+        for i in range(0, len(self.liste)):
+            if self.liste[i].titre == titre and self.liste[i].nom_auteur == auteur:
+                return_liste.append(i + 1)
+        return return_liste
 
 
