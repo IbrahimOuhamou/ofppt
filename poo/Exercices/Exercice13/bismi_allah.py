@@ -13,4 +13,5 @@ etagere.ajouter(livre_t("la ilaha illa Allah", "la ilaha illa Allah", "la ilaha 
 
 print(etagere.get_livre(1))
 print(etagere.get_livre(2))
+print(etagere.get_livre(3))
 
