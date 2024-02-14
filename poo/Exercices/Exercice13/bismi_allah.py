@@ -17,6 +17,8 @@ print(etagere.get_livre(2))
 print(etagere.get_livre(3))
 print("================================================================")
 print(etagere.chercher("la ilaha illa Allah", "la ilaha illa Allah"))
+print(etagere.chercher_auteur("la ilaha illa Allah"))
+print(etagere.chercher_titre("la ilaha illa Allah"))
 
 
 

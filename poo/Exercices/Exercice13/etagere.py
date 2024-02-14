@@ -27,4 +27,18 @@ class etagere_t():
             if self.liste[i].titre == titre and self.liste[i].nom_auteur == auteur:
                 return i + 1
 
+    def chercher_auteur(self, auteur):
+        liste = []
+        for i in range(0, len(self.liste)):
+            if self.liste[i].nom_auteur == auteur:
+                liste.append(i + 1)
+        return liste
+
+    def chercher_titre(self, titre):
+        liste = []
+        for i in range(0, len(self.liste)):
+            if self.liste[i].titre == titre:
+                liste.append(i + 1)
+        return liste
+
 
