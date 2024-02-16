@@ -89,3 +89,7 @@ ch = json.dumps(dictionaire)
 f.write(ch)
 f.close()
 
+f = open("bismi_allah.json", "r")
+x = json.loads(f.read())
+f.close()
+
