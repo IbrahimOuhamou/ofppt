@@ -68,8 +68,14 @@ print("*************************************************************************
 f = open("bismi_allah.csv", "w")
 csv_writer = csv.writer(f, delimiter=";")
 csv_writer.writerow(person_1.__str__().split(";"))
-print(person_1.__str__().split(";"))
 csv_writer.writerow(person_2.__str__().split(";"))
 csv_writer.writerow(person_3.__str__().split(";"))
+f.close()
+
+f = open("bismi_allah.csv", "r")
+csv_reader = csv.reader(f, delimiter=";")
+print(csv_reader.readrow())
+print(csv_reader.readrow())
+print(csv_reader.readrow())
 f.close()
 
