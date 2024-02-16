@@ -74,8 +74,7 @@ f.close()
 
 f = open("bismi_allah.csv", "r")
 csv_reader = csv.reader(f, delimiter=";")
-print(csv_reader.readrow())
-print(csv_reader.readrow())
-print(csv_reader.readrow())
+for line in csv_reader:
+    print(line)
 f.close()
 
