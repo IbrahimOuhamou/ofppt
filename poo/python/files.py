@@ -3,6 +3,7 @@
 print("in the name of Allah")
 
 import csv
+import json
 
 class person_t():
     def __init__(self, nom, prenom, age):
@@ -78,4 +79,13 @@ for line in csv_reader:
     print(line)
 f.close()
 
+print("***************************************************************************************")
+print("*************************************JSON files****************************************")
+print("***************************************************************************************")
+
+dictionaire = {"bismi allah":"in the name of Allah", "la ilaha illa Allah":"there is no diety worthy of worship exept of Allah"}
+f = open("bismi_allah.json", "w")
+ch = json.dumps(dictionaire)
+f.write(ch)
+f.close()
 
