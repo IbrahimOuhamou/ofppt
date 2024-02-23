@@ -1,0 +1,23 @@
+in the name of Allah
+
+I- partir theorique:
+1. sont commes les balises 'div' en fonctionality et proprietes, mais ils facillisent la un nom commun pour les 'nav's et les 'article's dans une site
+2.  <header>
+        <div>
+        </div>
+    </header>
+
+    <footer>
+    </footer>
+
+3.  <input type="range">
+    <input type="number">
+
+4.
+
+5.  position: fixed;
+    repeat: none;
+    ...
+
+
+
