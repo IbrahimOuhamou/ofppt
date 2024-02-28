@@ -1,0 +1,39 @@
+#in the name of Allah
+
+print("in the name of Allah")
+print("may allah forgive us")
+
+import tkinter as tk
+
+app = tk.Tk()
+
+int_var = tk.IntVar()
+
+tk.Label(app, text="nombre1:").place(x=10, y=20)
+tk.Label(app, text="nombre2:").place(x=10, y=40)
+tk.Label(app, text="resultat").place(x=10, y=60)
+entry_1 = tk.Entry(app)
+entry_1.place(x=80, y=20)
+entry_2 = tk.Entry(app)
+entry_2.place(x=80, y=40)
+entry_3 = tk.Entry(app)
+entry_3.place(x=80, y=60)
+
+tk.Radiobutton(app, text="Addition", variable=int_var, value=1).place(x=200, y=20)
+tk.Radiobutton(app, text="Soustraction", variable=int_var, value=2).place(x=200, y=40)
+tk.Radiobutton(app, text="Multiplucation", variable=int_var, value=3).place(x=200, y=60)
+tk.Radiobutton(app, text="Division", variable=int_var, value=4).place(x=200, y=80)
+
+def clear():
+    entry_1.delete(0, tk.END)
+    entry_2.delete(0, tk.END)
+    entry_3.delete(0, tk.END)
+
+def calcule():
+    print("la ilaha illa Allah")
+
+tk.Button(app, text="Remise a blanc", command=clear).place(x=5, y=100)
+tk.Button(app, text="OK", command=calcule).place(x=180, y=100)
+
+app.mainloop()
+
