@@ -11,16 +11,27 @@ int_var = tk.IntVar()
 
 tk.Label(app, text="nombre1:").place(x=10, y=20)
 tk.Label(app, text="nombre2:").place(x=10, y=40)
-tk.Label(app, text="resultat").place(x=10, y=60)
+tk.Label(app, text="resultat").place(x=10, y=100)
 entry_1 = tk.Entry(app)
 entry_1.place(x=80, y=20)
 entry_2 = tk.Entry(app)
 entry_2.place(x=80, y=40)
 entry_3 = tk.Entry(app)
-entry_3.place(x=80, y=60)
+entry_3.place(x=80, y=100)
+entry_4 = tk.Entry(app)
+entry_4.place(x=80, y=200)
 
 def activate():
     okbutton.config(state="normal")
+    entry_4.delete(0, tk.END)
+    if int_var.get() == 1:
+        entry_4.insert(0, "+")
+    if int_var.get() == 2:
+        entry_4.insert(0, "-")
+    if int_var.get() == 3:
+        entry_4.insert(0, "*")
+    if int_var.get() == 4:
+        entry_4.insert(0, "/")
 
 tk.Radiobutton(app, text="Addition",       variable=int_var, value=1, command=activate).place(x=250, y=20)
 tk.Radiobutton(app, text="Soustraction",   variable=int_var, value=2, command=activate).place(x=250, y=45)
@@ -52,9 +63,9 @@ def calcule():
         entry_3.insert(0, a/b)
 
 
-tk.Button(app, text="Remise a blanc", command=clear).place(x=5, y=100)
+tk.Button(app, text="Remise a blanc", command=clear).place(x=5, y=140)
 okbutton = tk.Button(app, text="OK", command=calcule, state="disabled")
-okbutton.place(x=180, y=100)
+okbutton.place(x=180, y=140)
 
 app.mainloop()
 
