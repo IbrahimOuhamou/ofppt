@@ -10,7 +10,7 @@ class person_t():
         self.nom = nom
         self.prenom = prenom
         self.age = age
-    
+
     def __str__(self):
         return self.nom + ";" + self.prenom + ";" + str(self.age)
 
