@@ -10,4 +10,12 @@ window.alert("la ilaha illa Allah mohammed rassoul Allah");
 let bismi_allah_var = window.prompt("what text you want?");
 window.alert(bismi_allah_var);
 
+let variable1 = parseInt(prompt("donner un valeur"));
+let variable2 = parseInt(prompt("donner un autre valeur"));
+
+alert(variable1 + " + " + variable2 + " == " + (variable1 + variable2));
+alert(variable1 + " - " + variable2 + " == " + (variable1 - variable2));
+alert(variable1 + " * " + variable2 + " == " + (variable1 * variable2));
+alert(variable1 + " / " + variable2 + " == " + (variable1 / variable2));
+alert(variable1 + " % " + variable2 + " == " + (variable1 % variable2));
 
