@@ -13,11 +13,11 @@ window.alert(bismi_allah_var);
 let variable1 = parseInt(prompt("donner un valeur"));
 let variable2 = parseInt(prompt("donner un autre valeur"));
 
-alert(variable1 + " + " + variable2 + " == " + (variable1 + variable2));
-alert(variable1 + " - " + variable2 + " == " + (variable1 - variable2));
-alert(variable1 + " * " + variable2 + " == " + (variable1 * variable2));
-alert(variable1 + " / " + variable2 + " == " + (variable1 / variable2));
-alert(variable1 + " % " + variable2 + " == " + (variable1 % variable2));
+alert(variable1 + " + " + variable2 + " == " + (variable1 + variable2) + "\n"
+    + variable1 + " - " + variable2 + " == " + (variable1 - variable2) + "\n"
+    + variable1 + " * " + variable2 + " == " + (variable1 * variable2) + "\n"
+    + variable1 + " / " + variable2 + " == " + (variable1 / variable2) + "\n"
+    + variable1 + " % " + variable2 + " == " + (variable1 % variable2));
 
 if(variable1 > variable2)
 {
@@ -31,6 +31,10 @@ else
 if(variable1 > 5)
 {
     alert(variable1 + " > 5")
+}
+else if(variable1 === 5)
+{
+    alert(variable1 + " == 5")
 }
 else
 {
@@ -57,5 +61,17 @@ else if(12 <= moyenne)
 else if(10 <= moyenne)
 {
     alert('Passable');
+}
+
+while(5 > parseInt(prompt("1. donner un valeur superieur a 5"))){}
+
+let variable = 0;
+do {
+    variable = parseInt(prompt("2. donner un valeur superieur a 5"));
+} while (variable < 5);
+
+for(i = 1; i <= 3; i++)
+{
+    alert(i + " la ilaha illa Allah");
 }
 
