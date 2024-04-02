@@ -1,7 +1,7 @@
 //in the name of Allah
 //la ilaha illa Allah mohammed rassoul Allah
 
-let n = parseInt(prompt("dooner num1"));
+let n = parseInt(prompt("donner num1"));
 
 let num_digits = 0;
 

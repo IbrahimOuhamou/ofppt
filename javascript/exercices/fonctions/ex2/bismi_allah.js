@@ -24,4 +24,3 @@ function pgcd(a, b)
 }
 
 alert("pgcd(" + num1 + ", " + num2 + ") == " + pgcd(num1, num2));
-
