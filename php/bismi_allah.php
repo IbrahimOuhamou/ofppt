@@ -22,7 +22,6 @@
         <?php $var1=12; $var2=0; ?>
         <p><b>var1 =</b> <?php echo "$var1";?></p>
         <p><b>var2 =</b> <?php echo $var2;?></p>
-        <?php echo;?>
         <p><b>var1 + var2 = </b> <?php echo $var1 + $var2; ?></p>
         <p><b>var1 - var2 = </b> <?php echo $var1 - $var2; ?></p>
         <p><b>var1 * var2 = </b> <?php echo $var1 * $var2; ?></p>
