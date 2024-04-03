@@ -10,10 +10,14 @@
     <p>in the name of Allah</p>
     <?php
 
-        $num = 5;
-        for($i=1; $i<10; $i++)
+        $num = rand(1, 13);
+        $a = rand(1, 15);
+        $b = rand(1, 15);
+        
+        for($i=min($b, $a); $i<=max($b, $a); $i++)
         {
-            echo "$num * $i == " . $num * $i . '<br>';
+            $result = $num * $i ;
+            echo "$num * $i = $result <br>";
         }
 
     ?>

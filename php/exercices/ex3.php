@@ -9,12 +9,16 @@
 <body>
     <p>in the name of Allah</p>
     <?php
-        $num = 5;
+        $num = 0;
         $tmp = $num;
         $result = '';
+        if($num === 0)
+        {
+            $result = '0';
+        }
         while($tmp != 0)
         {
-            $result = $result . $tmp % 2;
+            $result = $tmp % 2 . $result;
             $tmp = (int)($tmp/2);
         }
         echo $num . ' en binaire est ' . $result . '<br>';
