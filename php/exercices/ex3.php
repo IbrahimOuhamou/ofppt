@@ -9,19 +9,18 @@
 <body>
     <p>in the name of Allah</p>
     <?php
-        $num = 0;
-        $tmp = $num;
-        $result = '';
-        if($num === 0)
+
+        $num = rand(0, 200);
+        $num0 = $num;
+        $rest = '';
+
+        while($num != 0)
         {
-            $result = '0';
+            $rest = $num % 2 . $rest;
+            //$num = floor($num/2);
+            $num = (int)($num/2);
         }
-        while($tmp != 0)
-        {
-            $result = $tmp % 2 . $result;
-            $tmp = (int)($tmp/2);
-        }
-        echo $num . ' en binaire est ' . $result . '<br>';
+        echo $num0 . ' en binaire est ' . ($num0==0 ? '0' : $rest) . '<br>';
     ?>
 </body>
 </html>
