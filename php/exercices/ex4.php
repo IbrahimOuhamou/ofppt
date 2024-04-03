@@ -14,9 +14,9 @@
         for ($i=$min; $i <= $max; $i++)
         {
             echo "<h2> table de multiplucation de $i: </h2>";
-            for ($ii=1; $ii < 9; $ii++)
+            for ($j=1; $j <= 19; $j++)
             {
-                echo "$i * $ii == " . $i * $ii . '<br>';
+                echo "$i * $j == " . $i * $j . '<br>';
             }
         }
     ?>
