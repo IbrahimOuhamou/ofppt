@@ -6,3 +6,7 @@ document.getElementById('bismi_allah').onclick = function()
         document.getElementById('bismi_allah_img').src = 'dikr_image.jpg';
     }
 
+document.getElementById('bismi_allah_img').onclick = function()
+    {
+        document.getElementById('bismi_allah_img').src = 'dikr_image.jpg';
+    }
