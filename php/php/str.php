@@ -4,7 +4,5 @@
 
 echo "in the name of Allah\n";
 
-$dt = new Datetime();
-var_dump($dt);
-echo $dt->date;
+var_dump(strpos("bismi Allah", "God"));
 
