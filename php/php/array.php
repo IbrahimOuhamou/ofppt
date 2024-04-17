@@ -63,6 +63,21 @@
         {
             echo " / " . $v;
         }
+
+        echo '<br><br>';
+        //la suppression dans un tableau
+        $tab_supp = ["DEV", "IA", "MOBILE", "FS"];
+        
+        array_splice($tab_supp, 2, 1);
+
+        echo '<ol>';
+        foreach($tab_supp as $v)
+        {
+            echo '<li>' . $v . '</li>';
+        }
+        echo '</ol>';
+
     ?>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br>
 </body>
 </html>
