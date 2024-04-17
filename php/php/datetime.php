@@ -6,5 +6,5 @@ echo "in the name of Allah\n";
 
 $dt = new Datetime();
 var_dump($dt);
-echo $dt->date;
+echo $dt->e;
 
