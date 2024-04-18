@@ -68,16 +68,31 @@
         //la suppression dans un tableau
         $tab_supp = ["DEV", "IA", "MOBILE", "FS"];
         
-        array_splice($tab_supp, 2, 1);
+        //array_splice($tab_supp, 2, 1);
 
-        echo '<ol>';
+        echo '<ol start="0">';
         foreach($tab_supp as $v)
         {
             echo '<li>' . $v . '</li>';
         }
         echo '</ol>';
 
-    ?>
+        //supprimer l'element 'FS'
+        
+        //chercher une valeur dans un tableau
+        //array_search() -> position de l'element une si trouve sinon false
+        $pos = array_search("WEB", $tab_supp);
+        if($pos !== false)
+        {
+            array_splice($tab_supp, $pos, 1);
+        }
+        echo '<ol start="0">';
+        foreach($tab_supp as $v)
+        {
+            echo '<li>' . $v . '</li>';
+        }
+        echo '</ol>';
+        ?>
     <br><br><br><br><br><br><br><br><br><br><br><br><br>
 </body>
 </html>
