@@ -1,14 +1,19 @@
 //in the name of Allah
 //la ilaha illa Allah mohammed rassoul Allah
 
+function bismi_allah_abs(x)
+{
+    return x > 0 ? x : -x;
+}
+
 document.getElementById("button1").onclick = function()
 {
-    document.getElementById("result1").innerHTML = "alhamd li Allah valeur absolue: " + Math.abs(parseInt(document.getElementById("input1").value));
+    document.getElementById("result1").innerHTML = "alhamd li Allah valeur absolue: " + bismi_allah_abs(parseInt(document.getElementById("input1").value));
 }
 
 document.getElementById("button2").onclick = function()
 {
-    document.getElementById("result2").innerHTML = "alhamd li Allah somme des valeurs absolues: " + (Math.abs(parseInt(document.getElementById("input2-1").value)) + Math.abs(parseInt(document.getElementById("input2-2").value)));
+    document.getElementById("result2").innerHTML = "alhamd li Allah somme des valeurs absolues: " + (bismi_allah_abs(parseInt(document.getElementById("input2-1").value)) + bismi_allah_abs(parseInt(document.getElementById("input2-2").value)));
 }
 
 document.getElementById("button3").onclick = function()
