@@ -1,8 +1,6 @@
 //in the name of Allah
 //la ilaha illa Allah mohammed rassoul Allah
 
-//document.getElementById("bismi_allah_")
-
 let t1 = [];
 document.getElementById("bismi_allah_button1").onclick = function()
 {
@@ -24,7 +22,7 @@ document.getElementById("bismi_allah_button1").onclick = function()
         paragraph += t1[i] + " | ";
     }
 
-    document.getElementById("bismi_allah_p").innerHTML = "alhamdo li allah valeurs du tableau: " + paragraph;
+    document.getElementById("bismi_allah_p1").innerHTML = "alhamdo li allah valeurs du tableau: " + paragraph;
     document.getElementById("bismi_allah_rsult1-1").innerHTML = "alhamdo li allah min index est: " + i_min;
     document.getElementById("bismi_allah_rsult1-2").innerHTML = "alhamdo li allah min valeur est: " + t1[i_min];
     document.getElementById("bismi_allah_rsult1-3").innerHTML = "alhamdo li allah max index est: " + i_max;
@@ -40,4 +38,9 @@ document.getElementById("bismi_allah_button2-1").onclick = function()
     document.getElementById("bismi_allah_input2").value = '';
 }
 
+document.getElementById("bismi_allah_button2-2").onclick = function()
+{
+    document.getElementById("bismi_allah_p2").innerHTML = paragraph;
+
+}
 
