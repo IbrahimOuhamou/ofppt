@@ -6,4 +6,10 @@ document.f1.bismi_allah_button.onclick = function()
     alert(document.f1.s1.value)
 }
 
+document.f1.bismi_allah_textarea.onclick = function()
+{
+    alert(this.value)
+}
+
+
 
