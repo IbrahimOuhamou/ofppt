@@ -34,13 +34,32 @@ let t2 = [];
 let t2_result = [];
 document.getElementById("bismi_allah_button2-1").onclick = function()
 {
-    t2.push(document.getElementById("bismi_allah_input2").value);
+    t2.push(parseInt(document.getElementById("bismi_allah_input2").value));
     document.getElementById("bismi_allah_input2").value = '';
 }
 
 document.getElementById("bismi_allah_button2-2").onclick = function()
 {
-    document.getElementById("bismi_allah_p2").innerHTML = paragraph;
+    for(let i = 0; i < t2.length; i++)
+    {
+        let result = 0;
+        for(let j = i+1; j<t2.length; j++)
+        {
+            if(t2[j] > t2[i])
+            {
+                result += 1;
+            }
+        }
+        t2_result[i] = result;
+    }
 
+    let paragraph = "";
+    for (let i = 0; i<t2.length; i++)
+    {
+        paragraph += t2[i] + " : " + t2_result[i] + "<br/>";
+    }
+
+    //paragraph += t2[i] + " | ";
+    document.getElementById("bismi_allah_p2").innerHTML = paragraph;
 }
 
