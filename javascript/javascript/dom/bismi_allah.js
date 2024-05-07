@@ -20,3 +20,6 @@ else
     alert(document.getElementsByClassName("bismi_allah"))
 }
 
+document.querySelector("p").style.color = "green";
+document.querySelector("div > p").style.color = "purple";
+
