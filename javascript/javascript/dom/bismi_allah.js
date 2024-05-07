@@ -20,6 +20,9 @@ else
     alert(document.getElementsByClassName("bismi_allah"))
 }
 
-document.querySelector("p").style.color = "green";
+document.querySelector("p").style.backgroundColor = "green";
 document.querySelector("div > p").style.color = "purple";
+
+let list = document.querySelectorAll("p")
+list = [2].style.color = "grey";
 
