@@ -16,7 +16,7 @@ function bismi_allah_clicked() {
     }
 }
 
-document.getElementById("bismi_allah_button1").onclick = function()
+document.getElementById("bismi_allah_button1-1").onclick = function()
 {
     if(document.getElementById("bismi_allah_input").value == "") return
 
@@ -32,7 +32,7 @@ document.getElementById("bismi_allah_button1").onclick = function()
     parent.appendChild(bismi_allah_li)
 }
 
-document.getElementById("bismi_allah_button2").onclick = function()
+document.getElementById("bismi_allah_button1-2").onclick = function()
 {
     //let bismi_allah_lis = 
     for (bismi_allah_li of bismi_allah_to_delete) {
@@ -42,5 +42,21 @@ document.getElementById("bismi_allah_button2").onclick = function()
         }
     }
     bismi_allah_to_delete = []
+}
+
+document.getElementById("bismi_allah_button2-start").onclick = function() {
+    document.getElementById("bismi_allah_ul").firstElementChild.onclick()
+}
+
+document.getElementById("bismi_allah_button2-end").onclick = function() {
+    document.getElementById("bismi_allah_ul").lastElementChild.onclick()
+}
+
+document.getElementById("bismi_allah_button2-next").onclick = function() {
+    bismi_allah_to_delete[bismi_allah_to_delete.length - 1].nextElementSibling.onclick()
+}
+
+document.getElementById("bismi_allah_button2-previous").onclick = function() {
+    bismi_allah_to_delete[bismi_allah_to_delete.length - 1].previousElementSibling.onclick()
 }
 
