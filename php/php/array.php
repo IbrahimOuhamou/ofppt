@@ -69,6 +69,7 @@
         $tab_supp = ["DEV", "IA", "MOBILE", "FS"];
         
         //array_splice($tab_supp, 2, 1);
+        //$tab_supp = ["DEV", "IA", "FS"]
 
         echo '<ol start="0">';
         foreach($tab_supp as $v)
