@@ -8,22 +8,22 @@
     <?php
         if(isset($_REQUEST['enregistrer']))
         {
-            //try {
+            try {
                 $connexion = new PDO("mysql:host=192.168.122.126;dbname=myDB;", "bismi_allah", "bismi_allah");
                 //$connection = new PDO("mysql:host=localhost;dbname=myDB", "root");
 
                 $query = $connexion->prepare("INSERT INTO stagiaires values(?, ?, ?, ?, ?)");
-                $query->bindValue(1, 'A100');
-                $query->bindValue(2, 'myName');
-                $query->bindValue(3, 'Homme');
-                $query->bindValue(4, 'marie');
-                //$query->bindParam(4, (isset($_REQUEST['marie']) ? 'marie':'celibataire'));
+                $query->bindValue(1, $_REQUEST['cin']);
+                $query->bindValue(2, $_REQUEST['nom']);
+                $query->bindValue(3, $_REQUEST['genre']);
+                //$query->bindValue(4, 'marie');
+                $query->bindValue(4, (isset($_REQUEST['marie']) ? 'marie':'celibataire'));
                 $query->bindValue(5, 'IA');
 
                 $query->execute();
-//            } catch(Exception $e) {
-//                echo $e->getMessage();
-//            }
+            } catch(Exception $e) {
+                echo $e->getMessage();
+            }
         }
             /*
             if(isset($_REQUEST['filiere']))
