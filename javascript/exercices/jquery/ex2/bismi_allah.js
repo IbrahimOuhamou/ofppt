@@ -7,9 +7,9 @@ document.getElementById("bismi_allah_button1-1").onclick = function()
 {
     $('#bismi_allah_ul').append('<li>' + ($('#bismi_allah_input').val()) + '</li>');
     $('li').on('click', function() { 
-        $(this).css('background-color', 'yellow')
-        $(this).addClass('supp')
+        $(this).toggleClass('supp')
     })
+    $('#bismi_allah_input').val('')
 }
 
 document.getElementById("bismi_allah_button1-2").onclick = function() {
