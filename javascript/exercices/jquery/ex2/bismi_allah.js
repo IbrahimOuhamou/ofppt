@@ -16,3 +16,11 @@ document.getElementById("bismi_allah_button1-2").onclick = function() {
     $('.supp').remove()
 }
 
+document.getElementById("bismi_allah_button2-start").onclick = function() {
+    $('ul>li:first').toggleClass('supp')
+}
+
+document.getElementById("bismi_allah_button2-end").onclick = function() {
+    $('ul>li:last').toggleClass('supp')
+}
+
