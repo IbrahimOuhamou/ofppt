@@ -10,17 +10,22 @@
 
         <form method="post" action="bismi_allah12@mail.com">
             <pre>
-            E-mail:         <input type="text" id="email" pattern="[a-zA-Z]+" required>*
-            Societe:        <input type="text" id="societe" pattern="[a-zA-Z]+" required>*
+            Societe:        <input type="text" pattern="[a-zA-Z]+" required>*
             Person a cont:  <input type="text" id="pers_cont" pattern="[a-zA-Z]+" required>*
-            adresse entr:   <textarea rows="20" cols="20" id="addr"></textarea>
+            adresse entr:   <textarea rows="5" cols="20" id="addr"></textarea>
             Code post:      <input type="text" id="code_postal" pattern="[0-9]{5}" required>*
-            ville:          <input type="text" id="ville" pattern="[a-zA-Z]+" required>*
-            E-mail:         <input type="text" id="email" pattern="[a-zA-Z]+" required>*
-            Tele:           <input type="text" id="tele" pattern="[a-zA-Z]+@[a-zA-Z]+" required>*
-            env technique   <input type="text" id="env_tech" pattern="" required>*
+            ville:          <input type="text" pattern="[a-zA-Z]+" required>*
+            E-mail:         <input type="text" pattern=".*@.*">*
+            Tele:           <input type="text" pattern="[0-9]*">*
+            env technique   <textarea rows="5" cols="20" id="bismi_allah_env_tech_ta"></textarea>
+            <select id="bismi_allah_env_tech_s" multiple>
+                <option value="env1">env1</option>
+                <option value="env2">env2</option>
+                <option value="env3">env3</option>
+                <option value="env4">env4</option>
+            </select>
             </pre>
-            <button type="submit">envoyer</button>
+            <button type="submit" id="bismi_allah_button">envoyer</button>
             <button type="reset">effacer</button>
         </form>
 
