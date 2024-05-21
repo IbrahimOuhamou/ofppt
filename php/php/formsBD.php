@@ -13,14 +13,23 @@
                 //$connection = new PDO("mysql:host=localhost;dbname=myDB", "root");
 
                 $query = $connexion->prepare("INSERT INTO stagiaires values(?, ?, ?, ?, ?)");
+
                 $query->bindValue(1, $_REQUEST['cin']);
                 $query->bindValue(2, $_REQUEST['nom']);
                 $query->bindValue(3, $_REQUEST['genre']);
-                //$query->bindValue(4, 'marie');
                 $query->bindValue(4, (isset($_REQUEST['marie']) ? 'marie':'celibataire'));
-                $query->bindValue(5, 'IA');
+
+                $filieres = "";
+                if(isset($_REQUEST['filiere']))
+                {
+                    foreach($_REQUEST['filiere'] as $f) {
+                        $filieres = $filieres . " " . $f;
+                    }
+                }
+                $query->bindValue(5, $filieres);
 
                 $query->execute();
+                echo '<p>stagiair ajouter avec success</p>';
             } catch(Exception $e) {
                 echo $e->getMessage();
             }
