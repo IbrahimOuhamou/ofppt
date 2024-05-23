@@ -21,15 +21,12 @@
                 $stagiaires = $query->fetchAll();
                 
                 foreach($stagiaires as $s) {
-                    echo '<tr> <td>', $s['cin'] ,'</td> <td>', $s['nom'] ,'</td> <td>', $s['genre'] ,'</td> <td>', $s['marie'] ,'</td> <td>', $s['filiere'], '</td> <td><a href="php/supp_stag?cin=' . $s['cin'] . '">supprimer</a></td> </tr>';
+                    echo '<tr> <td>', $s['cin'] ,'</td> <td>', $s['nom'] ,'</td> <td>', $s['genre'] ,'</td> <td>', $s['marie'] ,'</td> <td>', $s['filiere'], '</td> <td><a href="/php/supp_stag.php?cin=' . $s['cin'] . '">supprimer</a></td> </tr>';
                 }
 
             } catch(Exception $e) {
                 echo $e->getMessage();
             }
-
-            
-
         ?>
     </table>
     

@@ -8,6 +8,7 @@
     <?php
         if(isset($_REQUEST['enregistrer']))
         {
+            var_dump($_REQUEST);
             try {
                 $connexion = new PDO("mysql:host=192.168.122.126;dbname=myDB;", "bismi_allah", "bismi_allah");
                 //$connection = new PDO("mysql:host=localhost;dbname=myDB", "root");
@@ -47,30 +48,30 @@
             echo '</ul>';
             */
     ?>
-    <form>
+    <form method="post">
         <pre>
-            CIN:    <input type="text" name="cin" />
+            CIN:    <input type="text" name="cin" required/>
 
-            NOM:    <input type="text" name="nom" />
+            NOM:    <input type="text" name="nom" required/>
 
-           FILIERS: <input type="checkbox" name="filiere[]" value="full-stack" /> Full Stack
-                    <input type="checkbox" name="filiere[]" value="mobile" /> Mobile
-                    <input type="checkbox" name="filiere[]" value="IA" /> IA
-                    <input type="checkbox" name="filiere[]" value="ARV" /> ARV
+           FILIERS: <input type="checkbox" name="filiere[]" value="full-stack"/> Full Stack
+                    <input type="checkbox" name="filiere[]" value="mobile"/> Mobile
+                    <input type="checkbox" name="filiere[]" value="IA"/> IA
+                    <input type="checkbox" name="filiere[]" value="ARV"/> ARV
 
-            PAYS:   <select name="pays">
+            PAYS:   <select name="pays" required>
                 <option>Morocco</option>
-                <option>Russia</option>
+                <option>Turkey</option>
                 <option>Palestine</option>
             </select>
 
 
-            GENRE:  <input type="radio" name="genre" value="male" checked=""> Male
+            GENRE:  <input type="radio" name="genre" value="male" checked=""/> Male
                     <input type="radio" name="genre" value="female"> Female 
 
             MARIE:  <input type="checkbox" name="marie" />
 
-            <input type="submit" name="enregistrer" value="enregistrer" />
+            <input type="submit" name="enregistrer" value="enregistrer"/>
         </pre>
     </form>
 </body>
