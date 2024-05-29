@@ -22,7 +22,13 @@ let bismi_allah_donnees = {
 }
 
 function bismi_allah_calculer_prix() {
-    alert("alhamdo li Allah")
+    let bismi_allah_table = document.getElementById('bismi_allah_table')
+    let bismi_allah_prix = 0
+    for(let i=1; i<bismi_allah_table.children.length; i++) {
+        bismi_allah_prix += parseInt(bismi_allah_table.children[i].children[1].innerHTML)
+    }
+    document.getElementById('bismi_allah_prix').innerHTML = 'PRIX: ' + bismi_allah_prix
+    document.getElementById('bismi_allah_prix_ttc').innerHTML = 'PRIX: ' + (bismi_allah_prix * 1.2)
 }
 
 function bismi_allah_supp() {
