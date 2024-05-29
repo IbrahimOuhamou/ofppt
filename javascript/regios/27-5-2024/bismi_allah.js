@@ -25,7 +25,7 @@ function bismi_allah_calculer_prix() {
     let bismi_allah_table = document.getElementById('bismi_allah_table')
     let bismi_allah_prix = 0
     for(let i=1; i<bismi_allah_table.children.length; i++) {
-        bismi_allah_prix += parseInt(bismi_allah_table.children[i].children[1].innerHTML)
+        bismi_allah_prix += parseInt(bismi_allah_table.children[i].children[1].innerHTML) * parseInt(bismi_allah_table.children[i].children[2].innerHTML)
     }
     document.getElementById('bismi_allah_prix').innerHTML = 'PRIX: ' + bismi_allah_prix
     document.getElementById('bismi_allah_prix_ttc').innerHTML = 'PRIX: ' + (bismi_allah_prix * 1.2)
@@ -40,7 +40,9 @@ document.getElementById("bismi_allah_button").onclick = function() {
     let bismi_allah_consoles = document.getElementById("bismi_allah_consoles")
     let bismi_allah_table = document.getElementById('bismi_allah_table')
     let bismi_allah_input = document.getElementById('bismi_allah_input')
-    for(let i = 0; i<bismi_allah_input.value; i++) {
+
+
+    {
         let bismi_allah_row = document.createElement('tr')
         let bismi_allah_console = bismi_allah_donnees["consoles"][bismi_allah_consoles.selectedIndex]
 
@@ -51,6 +53,10 @@ document.getElementById("bismi_allah_button").onclick = function() {
         let bismi_allah_prix = document.createElement('td')
         bismi_allah_prix.innerHTML = bismi_allah_console['prix']
         bismi_allah_row.appendChild(bismi_allah_prix)
+
+        let bismi_allah_quantite = document.createElement('td')
+        bismi_allah_quantite.innerHTML = bismi_allah_input.value
+        bismi_allah_row.appendChild(bismi_allah_quantite)
 
         let bismi_allah_manette = document.createElement('td')
         bismi_allah_manette.innerHTML = bismi_allah_console['manette']
@@ -69,7 +75,25 @@ document.getElementById("bismi_allah_button").onclick = function() {
 
         bismi_allah_table.appendChild(bismi_allah_row)
     }
+   
     bismi_allah_input.value = 0
     bismi_allah_calculer_prix()
+}
+
+function bismi_allah_to_json() {
+    let bismi_allah_table = document.getElementById('bismi_allah_table')
+    let bismi_allah_json = []
+    for(let i=1; i<bismi_allah_table.children.length; i++) {
+        obj = {'ref': '', 'prix': 0, 'quantite': 0, 'manette': '', 'image': ''}
+
+        obj['ref'] = bismi_allah_table.children[i].children[0].innerHTML
+        obj['prix'] = bismi_allah_table.children[i].children[1].innerHTML
+        obj['quantite'] = bismi_allah_table.children[i].children[2].innerHTML
+        obj['manette'] = bismi_allah_table.children[i].children[3].innerHTML
+        obj['image'] = bismi_allah_table.children[i].children[4].innerHTML
+
+        bismi_allah_json.push(obj)
+    }
+    console.log(bismi_allah_json)
 }
 
