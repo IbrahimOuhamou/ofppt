@@ -11,29 +11,30 @@
             $connexion = new PDO("mysql:host=192.168.122.126;dbname=myDB;", "bismi_allah", "bismi_allah");
             //$connection = new PDO("mysql:host=localhost;dbname=myDB", "root");
 
+            if(isset($_POST['enregistrer'])) {
+                $query = $connexion->prepare("UPDATE stagiaires SET nom=?, genre=?, marie=? WHERE cin=?");
+
+                $query->bindValue(1, $_POST['nom']);
+                $query->bindValue(2, $_POST['genre']);
+                $query->bindValue(3, (isset($_POST['marie']) ? 'marie':'celibataire'));
+
+                $filieres = "";
+                if(isset($_POST['filiere'])) {
+                    foreach($_POST['filiere'] as $f) {
+                        $filieres = $filieres . " " . $f;
+                    }
+                    $query->bindValue(4, $filieres);
+                } else {
+                    $query->bindValue(4, '');
+                }
+
+                $query->execute();
+            }
+
             $query = $connexion->prepare('SELECT * FROM stagiaires WHERE cin=?');
             $query->bindValue(1, $_REQUEST['cin']);
             $query->execute();
             $stagiaire = $query->fetchAll()[0];
-
-
-            if(isset($_REQUEST['enregistrer'])) {
-                $query = $connexion->prepare("UPDATE stagiaires SET nom=?, genre=?, marie=? WHERE cin=?");
-
-                $query->bindValue(1, $_REQUEST['nom']);
-                $query->bindValue(2, $_REQUEST['genre']);
-                $query->bindValue(3, (isset($_REQUEST['marie']) ? 'marie':'celibataire'));
-
-                $filieres = "";
-                if(isset($_REQUEST['filiere'])) {
-                    foreach($_REQUEST['filiere'] as $f) {
-                        $filieres = $filieres . " " . $f;
-                    }
-                }
-                $query->bindValue(4, $filieres);
-
-                $query->execute();
-            }
         } catch(Exception $e) {
             echo $e->getMessage();
         }
@@ -44,7 +45,7 @@
 
             NOM:    <input type="text" name="nom" required value=<?php echo '"', $stagiaire['nom'], '"' ?>/>
 
-            FILIERS: <input type="checkbox" name="filiere[]" Aalue="full-stack" <?php if(strpos($stagiaire['filiere'], 'full-stack') !== false) echo 'checked' ?> /> Full Stack
+            FILIERS: <input type="checkbox" name="filiere[]" value="full-stack" <?php if(strpos($stagiaire['filiere'], 'full-stack') !== false) echo 'checked' ?> /> Full Stack
                     <input type="checkbox" name="filiere[]" value="mobile" <?php if(strpos($stagiaire['filiere'], 'mobile') !== false) echo 'checked' ?>/> Mobile
                     <input type="checkbox" name="filiere[]" value="IA" <?php if(strpos($stagiaire['filiere'], 'IA') !== false) echo 'checked' ?>/> IA
                     <input type="checkbox" name="filiere[]" value="ARV" <?php if(strpos($stagiaire['filiere'], 'ARV') !== false) echo 'checked' ?>/> ARV
