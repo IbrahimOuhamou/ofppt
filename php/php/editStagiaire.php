@@ -11,16 +11,16 @@
             $connexion = new PDO("mysql:host=192.168.122.126;dbname=myDB;", "bismi_allah", "bismi_allah");
             //$connection = new PDO("mysql:host=localhost;dbname=myDB", "root");
 
-            if(isset($_POST['enregistrer'])) {
-                $query = $connexion->prepare("UPDATE stagiaires SET nom=?, genre=?, marie=? WHERE cin=?");
+            if(isset($_REQUEST['enregistrer'])) {
+                $query = $connexion->prepare("UPDATE stagiaires SET nom=?, genre=?, marie=?, filiere=? WHERE cin=?");
 
-                $query->bindValue(1, $_POST['nom']);
-                $query->bindValue(2, $_POST['genre']);
-                $query->bindValue(3, (isset($_POST['marie']) ? 'marie':'celibataire'));
+                $query->bindValue(1, $_REQUEST['nom']);
+                $query->bindValue(2, $_REQUEST['genre']);
+                $query->bindValue(3, (isset($_REQUEST['marie']) ? 'marie':'celibataire'));
 
                 $filieres = "";
-                if(isset($_POST['filiere'])) {
-                    foreach($_POST['filiere'] as $f) {
+                if(isset($_REQUEST['filiere'])) {
+                    foreach($_REQUEST['filiere'] as $f) {
                         $filieres = $filieres . " " . $f;
                     }
                     $query->bindValue(4, $filieres);
@@ -28,6 +28,7 @@
                     $query->bindValue(4, '');
                 }
 
+                $query->bindValue(5, $_REQUEST['cin']);
                 $query->execute();
             }
 
