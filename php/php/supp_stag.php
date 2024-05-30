@@ -9,6 +9,7 @@
         $query->bindValue(1, $_REQUEST['cin']);
         $query->execute();
 
+        header("location:/php/listStagiaires.php");
     } catch(Exception $e) {
         echo $e->getMessage();
     }
