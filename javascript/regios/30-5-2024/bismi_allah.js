@@ -1,7 +1,8 @@
 //بسم الله الرحمن الرحيم
 //la ilaha illa Allah Mohammed Rassoul Allah
 
-document.getElementById("button_enregister").onclick = function() {
+
+enregister() {
     if(!validerForm()) {
         alert("valider lo formulaire!")
         return
@@ -31,9 +32,10 @@ document.getElementById("button_enregister").onclick = function() {
 
     document.getElementById("enregitrers_table").appendChild(row)
 }
+document.getElementById("button_enregister").onclick = enregistrer
 
 function validerForm() {
-    if(document.getElementById("input_nom").value == "") return false
+    if(document.getElementById("input_nom").value == "" || !/[a-zA-Z]/.test(document.getElementById("input_nom").value)) return false
     if(document.getElementById("input_prenom").value == "") return false
     if(document.getElementById("input_age").value == "") return false
     if(document.getElementById("input_sexe_femme").checked == document.getElementById("input_sexe_homme").checked) return false
@@ -41,5 +43,15 @@ function validerForm() {
     if(document.getElementById("input_checkbox_marathon").checked || document.getElementById("input_checkbox_natation").checked || document.getElementById("input_checkbox_sprint").checked || document.getElementById("input_checkbox_saut").checked)
 
     return true
+}
+
+document.onkeydown = function(event) {
+    if (event.key === 'Escape') {
+        window.close()
+    }
+
+    if (event.key === 'Enter') {
+        enregistrer()
+    }
 }
 
