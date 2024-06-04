@@ -1,7 +1,5 @@
-<!DOCTYPE html>
-<!--بسم الله الرحمن الرحيم-->
-
 <?php
+    header("location:/php/listStagiaires.php");
     try {
         $connexion = new PDO('mysql:host=192.168.122.126;dbname=myDB;', 'bismi_allah', 'bismi_allah');
 
@@ -9,12 +7,13 @@
         $query->bindValue(1, $_REQUEST['cin']);
         $query->execute();
 
-        header("location:/php/listStagiaires.php");
     } catch(Exception $e) {
         echo $e->getMessage();
     }
 ?>
 
+<!--بسم الله الرحمن الرحيم-->
+<!DOCTYPE html>
 <html lang="en">
     <head>
         <meta charset="UTF-8">
