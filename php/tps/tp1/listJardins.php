@@ -11,7 +11,7 @@ try {
     $query->bindValue(1, $_SESSION['user']['NumJardinier']);
     $query->execute();
 
-    $list_jardin = $query->fetchAll();
+    $list_jardin = $query->fetchAll(PDO::FETCH_ASSOC);
 
 } catch(PDOException $e) {
     echo $e->getMessage();
