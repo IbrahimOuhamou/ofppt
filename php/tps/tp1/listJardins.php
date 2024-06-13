@@ -13,6 +13,10 @@ try {
 
     $list_jardin = $query->fetchAll(PDO::FETCH_ASSOC);
 
+    //to JSON by the will of Allah
+    //$data = json_encode($list_jardin);
+    //file_put_contents('bismi_allah.json', $data);
+
 } catch(PDOException $e) {
     echo $e->getMessage();
 }
