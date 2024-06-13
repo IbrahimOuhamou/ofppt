@@ -1,8 +1,6 @@
 <?php
     //بسم الله الرحمن الرحيم
-    session_set_cookie_params(60 * 60 * 4);
-    session_start();
-    include 'menu.php';
+    require('menu.php');
 ?>
 <!DOCTYPE html>
 <!--بسم الله الرحمن الرحيم-->

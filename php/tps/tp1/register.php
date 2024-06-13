@@ -1,7 +1,6 @@
 <?php
     //بسم الله الرحمن الرحيم
-    session_set_cookie_params(60 * 60 * 4);
-    session_start();
+    require('menu.php');
     try {
         if(isset($_REQUEST['button_login'])) {
             $connection = new PDO("mysql:host=192.168.122.126;dbname=tp_jardin;", 'bismi_allah', 'bismi_allah');

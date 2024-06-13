@@ -2,7 +2,7 @@
 //بسم الله الرحمن الرحيم
 //la ilaha illa Allah Mohammed Rassoul Allah
 
-session_start();
+require('menu.php');
 
 try {
     $connection = new PDO('mysql:host=192.168.122.126;dbname=tp_jardin', 'bismi_allah', 'bismi_allah');
