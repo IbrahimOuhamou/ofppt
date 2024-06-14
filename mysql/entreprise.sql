@@ -8,7 +8,7 @@ use MaBase;
 
 DROP TABLE IF EXISTS Employes;
 CREATE TABLE Employes (
-	id INT,
+	empl_id INT,
 	nom VARCHAR(100),
 	prenom VARCHAR(100),
 	age INT,
@@ -18,14 +18,14 @@ CREATE TABLE Employes (
 DROP TABLE IF EXISTS Division;
 
 CREATE TABLE Division(
-	id INT PRIMARY KEY,
+	div_id INT PRIMARY KEY,
 	nom VARCHAR(100),
 	NbrEmp INT,
 	empl_id INT,
-	CONSTRAINT fk_division FOREIGN KEY (empl_id) REFERENCES Employes(id)
+	FOREIGN KEY (empl_id) REFERENCES Employes(empl_id)
 );
 
-INSERT INTO Employes (id, nom, prenom, age, salaire) VALUES 
+INSERT INTO Employes (empl_id, nom, prenom, age, salaire) VALUES 
 	(1, 'Dupont', 'Jean', 30, 2500.00),
 	(2, 'Dup', 'Ali', 25, 5000.00);
 
