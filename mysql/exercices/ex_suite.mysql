@@ -1,0 +1,38 @@
+--بسم الله الرحمن الرحيم
+--la ilaha illa Allah Mohammed Rassoul Allah
+
+CREATE DATABASE IF NOT EXISTS bismi_allah_db;
+
+USE bismi_allah_db;
+
+CREATE TABLE IF NOT EXISTS client (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    nom VARCHAR(64),
+    email VARCHAR(255),
+    type_client VARCHAR(12)
+);
+
+CREATE TABLE IF NOT EXISTS marque (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    nom VARCHAR(64),
+    pays_origine VARCHAR(32)
+);
+
+CREATE TABLE IF NOT EXISTS voiture (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    model VARCHAR(64),
+    marque INT,
+    annee_fabrication INT,
+    FOREIGN KEY (marque) REFERENCES marque(id)
+);
+
+CREATE TABLE IF NOT EXISTS location (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    id_client INT,
+    id_voiture INT,
+
+    FOREIGN KEY (id_client) REFERENCES client(id),
+    FOREIGN KEY (id_voiture) REFERENCES voiture(id),
+);
+
+
