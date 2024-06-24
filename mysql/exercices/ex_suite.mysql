@@ -5,20 +5,25 @@ CREATE DATABASE IF NOT EXISTS bismi_allah_db;
 
 USE bismi_allah_db;
 
-CREATE TABLE IF NOT EXISTS client (
+DROP TABLE IF EXISTS location;
+DROP TABLE IF EXISTS client;
+DROP TABLE IF EXISTS voiture;
+DROP TABLE IF EXISTS marque;
+
+CREATE TABLE client (
     id INT PRIMARY KEY AUTO_INCREMENT,
     nom VARCHAR(64),
     email VARCHAR(255),
     type_client VARCHAR(12)
 );
 
-CREATE TABLE IF NOT EXISTS marque (
+CREATE TABLE marque (
     id INT PRIMARY KEY AUTO_INCREMENT,
     nom VARCHAR(64),
     pays_origine VARCHAR(32)
 );
 
-CREATE TABLE IF NOT EXISTS voiture (
+CREATE TABLE voiture (
     id INT PRIMARY KEY AUTO_INCREMENT,
     model VARCHAR(64),
     marque INT,
@@ -26,7 +31,7 @@ CREATE TABLE IF NOT EXISTS voiture (
     FOREIGN KEY (marque) REFERENCES marque(id)
 );
 
-CREATE TABLE IF NOT EXISTS location (
+CREATE TABLE location (
     id INT PRIMARY KEY AUTO_INCREMENT,
     id_client INT,
     id_voiture INT,
@@ -35,38 +40,43 @@ CREATE TABLE IF NOT EXISTS location (
     montant_total INT,
 
     FOREIGN KEY (id_client) REFERENCES client(id),
-    FOREIGN KEY (id_voiture) REFERENCES voiture(id),
+    FOREIGN KEY (id_voiture) REFERENCES voiture(id)
 );
 
 -- alhamdo li Allah done with the first part
 -- the second part was out-of-xxxx
 -- so these inserted values are mine
 
-INSERT INTO marque VALUES 
-    (0, 'tbark Allah 3la marqua', 'lhihatinat'),
-    (1, 'alhamdo li Allah 3la had lmarka', 'ghir fdora')
+INSERT INTO marque (nom, pays_origine) VALUES 
+    ('tbark Allah 3la marqua', 'lhihatinat'),
+    ('alhamdo li Allah 3la had lmarka', 'ghir fdora')
 ;
 
-INSERT INTO client VALUES
-    (0, 'ana', 'bismi_allah@rmail.com', '1'),
-    (1, 'charika allah ysehel 3lihom', 'allah_ysehel_3lina@rmail.com', 'charika')
+INSERT INTO client (nom, email, type_client) VALUES
+    ('ana', 'bismi_allah@rmail.com', '1'),
+    ('charika allah ysehel 3lihom', 'allah_ysehel_3lina@rmail.com', 'charika')
 ;
 
-INSERT INTO voiture VALUES
-    (0, 'tabaraka Allah', 0, 3212),
-    (1, 'alhamdo li Allah', 1, 0), -- alhamdo li Allah fi kolli wa9t wa 7in
+INSERT INTO voiture (model, marque, annee_fabrication) VALUES
+    ('tabaraka Allah', 1, 3212),
+    ('alhamdo li Allah', 2, 0), -- alhamdo li Allah fi kolli wa9t wa 7in
     -- الحمد لله عدد خلقه ورضى نفسه وزنة عرشه ومداد كلماته
-    (2, 'hada min fadli Rabbi', 1, 2000)
+    ('hada min fadli Rabbi', 2, 2000)
 ;
 
-INSERT INTO voiture VALUES
-    (0, 0, 1, NOW(), NOW(), 0),
-    (1, 1, 0, NOW(), NOW(), 0),
-    (2, 1, 1, NOW(), NOW(), 0)
+INSERT INTO location (id_client, id_voiture, date_debut, date_fin_prevue, montant_total) VALUES
+    (1, 2, NOW(), NOW(), 0),
+    (2, 1, NOW(), NOW(), 0),
+    (2, 2, NOW(), NOW(), 0)
 ;
 
 SELECT * FROM marque;
 SELECT * FROM client;
 SELECT * FROM voiture;
 SELECT * FROM location;
+
+DROP TABLE location;
+DROP TABLE client;
+DROP TABLE voiture;
+DROP TABLE marque;
 
