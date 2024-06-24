@@ -30,9 +30,43 @@ CREATE TABLE IF NOT EXISTS location (
     id INT PRIMARY KEY AUTO_INCREMENT,
     id_client INT,
     id_voiture INT,
+    date_debut DATETIME DEFAULT NOW(),
+    date_fin_prevue DATETIME,
+    montant_total INT,
 
     FOREIGN KEY (id_client) REFERENCES client(id),
     FOREIGN KEY (id_voiture) REFERENCES voiture(id),
 );
 
+-- alhamdo li Allah done with the first part
+-- the second part was out-of-xxxx
+-- so these inserted values are mine
+
+INSERT INTO marque VALUES 
+    (0, 'tbark Allah 3la marqua', 'lhihatinat'),
+    (1, 'alhamdo li Allah 3la had lmarka', 'ghir fdora')
+;
+
+INSERT INTO client VALUES
+    (0, 'ana', 'bismi_allah@rmail.com', '1'),
+    (1, 'charika allah ysehel 3lihom', 'allah_ysehel_3lina@rmail.com', 'charika')
+;
+
+INSERT INTO voiture VALUES
+    (0, 'tabaraka Allah', 0, 3212),
+    (1, 'alhamdo li Allah', 1, 0), -- alhamdo li Allah fi kolli wa9t wa 7in
+    -- الحمد لله عدد خلقه ورضى نفسه وزنة عرشه ومداد كلماته
+    (2, 'hada min fadli Rabbi', 1, 2000)
+;
+
+INSERT INTO voiture VALUES
+    (0, 0, 1, NOW(), NOW(), 0),
+    (1, 1, 0, NOW(), NOW(), 0),
+    (2, 1, 1, NOW(), NOW(), 0)
+;
+
+SELECT * FROM marque;
+SELECT * FROM client;
+SELECT * FROM voiture;
+SELECT * FROM location;
 
