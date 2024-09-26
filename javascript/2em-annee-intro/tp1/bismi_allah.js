@@ -34,5 +34,5 @@ console.log(produit_a.afficher(0.2));
 console.log(produit_b.afficher(0.07));
 
 let produit_c = new ProduitEnRemise('C', 3000, .3);
-console.log(produit_c.afficher(0.3));
+console.log(produit_c.afficher(0.2));
 
