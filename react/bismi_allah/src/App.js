@@ -1,23 +1,16 @@
-import logo from './logo.svg';
+// بسم الله الرحمن الرحيم
+// la ilaha illa Allah Mohammed rassoul Allah
 import './App.css';
+import ElementsLists from './ElementsList.js';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <main>
+        <div>
+          <ElementsLists title="bismi Allah" type="A"></ElementsLists>
+        </div>
+      </main>
     </div>
   );
 }
