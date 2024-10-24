@@ -11,12 +11,19 @@ const products_data = [
 
 function Product(props) {
 
-  return (<div className="d1">
-    <img src={props.p.thumbnail} alt="img"/>
-    <h3>{props.p.title}</h3>
-    <span>price: {props.p.price}</span>
-    <button>bismi Allah</button>
-  </div>)
+  return (<tr>
+    <td>{props.p.title}</td>
+    <td>{props.p.price}</td>
+    <td><img src={props.p.thumbnail} alt="img"/></td>
+  </tr>);
+
+  // return (<div className="d1">
+  //   <img src={props.p.thumbnail} alt="img"/>
+  //   <h3>{props.p.title}</h3>
+  //   <span>price: {props.p.price}</span>
+  //   <button>bismi Allah</button>
+  // </div>)
+
 }
 
 export default function Products() {
@@ -25,8 +32,17 @@ export default function Products() {
   //   products[i] = <Product p={ products_data[i] }></Product>
   // }
 
-  return (<div className="products-list">
+  return (<table>
+    <tr>
+      <th>Produit</th>
+      <th>Prix</th>
+      <th>Image</th>
+    </tr>
     {products_data.map(product => ( <Product p={product}></Product> ))}
-  </div>);
+  </table>);
+
+  // return (<div className="products-list">
+  //   {products_data.map(product => ( <Product p={product}></Product> ))}
+  // </div>);
 }
 
