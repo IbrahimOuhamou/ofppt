@@ -1,0 +1,88 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.products-list {
+  display: flex;
+}
+
+.d1 {
+    max-width: fit-content;border: 1px solid #ccc; /* Bordure légère */
+    border-radius: 8px; /* Coins arrondis */
+    padding: 16px; /* Espace intérieur */
+    margin: 16px; /* Espace extérieur */
+    text-align: center; /* Centrer le texte */
+    background-color: #f9f9f9; /* Couleur de fond */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Ombre légère */
+    transition: transform 0.2s; /* Transition pour l'effet au survol */
+}
+ 
+.d1 img {
+    max-width: 100%; /* Limite la largeur de l'image */
+    height: auto; /* Conserve les proportions de l'image */
+    border-radius: 4px; /* Coins arrondis pour l'image */
+}
+ 
+.d1 h3 {
+    font-size: 1.5em; /* Taille de la police pour le titre */
+    margin: 10px 0; /* Espace vertical autour du titre */
+}
+ 
+.d1 span {
+    display: block; /* Afficher comme un bloc pour le prix */
+    font-size: 1.2em; /* Taille de la police pour le prix */
+    color: #333; /* Couleur du texte pour le prix */
+}
+ 
+.d1 button {
+    background-color: #007bff; /* Couleur du bouton */
+    color: white; /* Couleur du texte du bouton */
+    border: none; /* Pas de bordure */
+    border-radius: 4px; /* Coins arrondis */
+    padding: 10px 16px; /* Espace intérieur du bouton */
+    cursor: pointer; /* Curseur en main au survol */
+    transition: background-color 0.3s; /* Transition pour la couleur de fond */
+}
+ 
+.d1 button:hover {
+    background-color: #0056b3; /* Couleur du bouton au survol */
+}
+ 
+.d1:hover {
+    transform: scale(1.05); /* Légère augmentation de la taille au survol */
+}
