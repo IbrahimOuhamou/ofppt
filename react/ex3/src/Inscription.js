@@ -1,6 +1,6 @@
 // بسم الله الرحمن الرحيم
 // la ilaha illa Allah Mohammed rassoul Allah
-import React, { useRef, useState } from "react";
+import React, { useState } from "react";
  
 export default function Inscription() {
   const [information, setInformation] = useState("");
