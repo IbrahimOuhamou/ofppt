@@ -24,7 +24,7 @@ function App() {
           + <br />
           <input type="text" ref={y}/> <br />
           <button onClick={sum}>bismi Allah</button> <br />
-          <span style={{color : result < 0 ? "red" : "blue"}}>{result}</span>
+          <span style={{color : result < 0 ? "red" : "blue"}}>{result} | {result > 0 ? "accepte" : "refuse"}</span>
         </div>
       </main>
     </div>
