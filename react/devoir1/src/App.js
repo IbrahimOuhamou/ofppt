@@ -3,6 +3,7 @@
 import './App.css';
 
 import Expert1 from './Expert1.js';
+import Formulaire from './Formulaire.js';
 
 function App() {
   return (
@@ -10,6 +11,7 @@ function App() {
       <main>
         <div>
           <Expert1></Expert1>
+          <Formulaire />
         </div>
       </main>
     </div>
