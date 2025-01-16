@@ -1,0 +1,110 @@
+[
+    {
+        "id": 1,
+        "nom": "Lionel Messi",
+        "age": 35,
+        "equipe_id": 2
+    },
+    {
+        "id": 2,
+        "nom": "Karim Benzema",
+        "age": 35,
+        "equipe_id": 2
+    },
+    {
+        "id": 3,
+        "nom": "Marcus Rashford",
+        "age": 25,
+        "equipe_id": 3
+    },
+    {
+        "id": 4,
+        "nom": "Harry Maguire",
+        "age": 30,
+        "equipe_id": 3
+    },
+    {
+        "id": 5,
+        "nom": "Thomas Müller",
+        "age": 34,
+        "equipe_id": 4
+    },
+    {
+        "id": 6,
+        "nom": "Joshua Kimmich",
+        "age": 28,
+        "equipe_id": 4
+    },
+    {
+        "id": 7,
+        "nom": "Paul Pogba",
+        "age": 30,
+        "equipe_id": 5
+    },
+    {
+        "id": 8,
+        "nom": "Federico Chiesa",
+        "age": 26,
+        "equipe_id": 5
+    },
+    {
+        "id": 9,
+        "nom": "RobertLewandowski",
+        "age": 34,
+        "equipe_id": 6
+    },
+    {
+        "id": 10,
+        "nom": "Pedri",
+        "age": 21,
+        "equipe_id": 6
+    },
+    {
+        "id": 11,
+        "nom": "Mohamed Salah",
+        "age": 31,
+        "equipe_id": 7
+    },
+    {
+        "id": 12,
+        "nom": "Virgil van Dijk",
+        "age": 32,
+        "equipe_id": 7
+    },
+    {
+        "id": 13,
+        "nom": "Olivier Giroud",
+        "age": 37,
+        "equipe_id": 8
+    },
+    {
+        "id": 14,
+        "nom": "Rafael Leão",
+        "age": 24,
+        "equipe_id": 8
+    },
+    {
+        "id": 15,
+        "nom": "Dusan Tadic",
+        "age": 35,
+        "equipe_id": 9
+    },
+    {
+        "id": 16,
+        "nom": "Jurrien Timber",
+        "age": 22,
+        "equipe_id": 9
+    },
+    {
+        "id": 17,
+        "nom": "Lautaro Martínez",
+        "age": 26,
+        "equipe_id": 10
+    },
+    {
+        "id": 18,
+        "nom": "Nicolò Barella",
+        "age": 26,
+        "equipe_id": 10
+    }
+]

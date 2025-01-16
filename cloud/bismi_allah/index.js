@@ -24,7 +24,6 @@ app.get('/equip/by-name/:name', (req, res) => {
 });
 
 app.post('/ajouter', (req, res) => {
-    console.log("alhamdo li Allah req: '", req.body, "'");
     liste.push(req.body);
     res.status(200).json({
         status: 200,
