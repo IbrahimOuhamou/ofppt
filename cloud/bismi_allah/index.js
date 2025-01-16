@@ -42,6 +42,16 @@ app.put('/update', (req, res) => {
     });
 })
 
+app.delete('/equip/by-id/:id', (req, res) => {
+    const element_to_delelete = liste.find(x=>x.id===req.params.id);
+    const index = liste.indexOf(element_to_delelete);
+    liste.splice(index, 1);
+    res.status(200).json({
+        status: 200,
+        message: "alhamdo li Allah",
+    });
+});
+
 app.get('/', (req, res) => {
     res.send('بسم الله الرحمن الرحيم');
 })
