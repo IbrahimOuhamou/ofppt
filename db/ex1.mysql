@@ -1,0 +1,42 @@
+-- بسم الله الرحمن الرحيم
+-- la ilaha illa Allah Mohammed Rassoul Allah
+
+
+
+CREATE TABLE IF NOT EXISTS Developpeur (
+    NumDev INT PRIMARY KEY,
+    NomDev VARCHAR(24),
+    AdrDev VARCHAR(64),
+    EmailDev VARCHAR(32),
+    TelDev VARCHAR(14)
+);
+
+CREATE TABLE IF NOT EXISTS Projet (
+    NumProj INT PRIMARY KEY,
+    TitreProj VARCHAR(24),
+    DateDeb DATE,
+    DateFin DATE
+);
+
+CREATE TABLE IF NOT EXISTS Logiciel (
+    CodLog INT PRIMARY KEY,
+    NomLog VARCHAR(24),
+    PrixLog DECIMAL(4, 2),
+    NumProj INT,
+    FOREIGN kEY (NumProj) REFERENCES Projet(NumProj)
+);
+
+CREATE TABLE IF NOT EXISTS Realisation (
+    NumProj INT,
+    NumDev INT,
+    FOREIGN kEY (NumProj) REFERENCES Projet(NumProj),
+    FOREIGN kEY (NumDev) REFERENCES Developpeur(NumDev)
+);
+
+-- 1
+SELECT NomLog, PrixLog FROM Logiciel WHERE NumProj = (SELECT NumProj FROM Projet WHERE TitreProj = 'gestion de stcok');
+
+
+-- 2
+SELECT Projet.TitreProj, SUM(Projet.PrixLog) FROM Projet, Logiciel WHERE Project.NumProj = 10;
+
