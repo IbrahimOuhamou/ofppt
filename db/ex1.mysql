@@ -1,8 +1,6 @@
 -- بسم الله الرحمن الرحيم
 -- la ilaha illa Allah Mohammed Rassoul Allah
 
-
-
 CREATE TABLE IF NOT EXISTS Developpeur (
     NumDev INT PRIMARY KEY,
     NomDev VARCHAR(24),

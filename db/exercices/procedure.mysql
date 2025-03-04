@@ -1,0 +1,76 @@
+-- بسم الله الرحمن الرحيم
+-- la ilaha illa Allah Mohammed Rassoul Allah
+
+-- Créer une procédure qui affiche la liste des plats avec pour chaque plat son numéro, son nom et le nom du chef qui l’a préparé.
+DELIMITER $$
+CREATE PRECEDURE select_notes_et_chef(IN num_plat INT)
+BEGIN
+    SELECT NumPlat, NomPlat FROM NotesJury WHERE NumPlat = num_plat INNER JOIN SELECT NomChef FROM Chef WHERE NumChef = Plat.NumChef;
+END $$
+DELIMITER ;
+
+-- Créer une procédure qui reçoit un numéro de plat et qui affiche son nom ainsi que le nom et la spécialité du chef concerné
+DELIMITER $$
+CREATE PRECEDURE select_notes_et_chef(IN num_plat INT)
+BEGIN
+    SELECT Note FROM NotesJury WHERE NumPlat = num_plat INNER JOIN SELECT NomChef, Specialite FROM Chef WHERE NumChef = Plat.NumChef;
+END $$
+DELIMITER ;
+
+-- Créer une procédure qui reçoit un numéro de plat et qui affiche la liste des notes attribuées avec, pour chaque note, le numéro du membre du jury, son nom, sa fonction et la note attribuée
+DELIMITER $$
+CREATE PRECEDURE select_notes_et_jury(IN num_plat INT)
+BEGIN
+    SELECT Note FROM NotesJury WHERE NumPlat = num_plat INNER JOIN SELECT * FROM MembreJury WHERE NumMembreJury = Plat.NumMembre;
+END $$
+DELIMITER ;
+
+-- Créer une procédure qui retourne le nombre total de plats inscrits dans le concours.
+DELIMITER $$
+CREATE PRECEDURE nombre_plats(OUT nombre INT)
+BEGIN
+    SET nombre := SELECT COUNT(*) FROM Plat;
+END $$
+DELIMITER ;
+
+-- Créer une procédure qui reçoit un numéro de membre du jury et un numéro de plat, puis permet de modifier la note attribuée par ce membre pour ce plat.
+DELIMITER $$
+CREATE PRECEDURE changer_note(IN num_plat INT, IN num_jury INT, IN note INT)
+BEGIN
+    UPDATE NotesJury SET Note = note WHERE NumPlat = num_plat AND NumJury = num_jury;
+END $$
+DELIMITER ;
+
+-- Créer une procédure qui reçoit un numéro de plat et retourne la moyenne des notes attribuées à ce plat
+DELIMITER $$
+CREATE PRECEDURE moyenne_notes(IN num_plat INT, OUT moyenne INT)
+BEGIN
+    SET moyenne := SELECT AVG(Note) FROM NotesJury WHERE NumPlat = num_plat;
+END $$
+DELIMITER ;
+
+-- Créer une procédure qui reçoit un numéro de plat et supprime toutes les notes associées avant de supprimer le plat.
+DELIMITER $$
+CREATE PRECEDURE supprime_plat(IN num_plat INT)
+BEGIN
+    DELETE FROM NotesJury WHERE NumPlat = num_plat;
+    DELETE FROM Plat WHERE NumPlat = num_plat;
+END $$
+DELIMITER ;
+
+-- Créer une procédure qui augmente de 1 point toutes les notes d’un plat sans dépasser 20
+DELIMITER $$
+CREATE PRECEDURE ajout_point()
+BEGIN
+    UPDATE NotesJury SET Note = Note + 1 WHERE Note <= 19;
+END $$
+DELIMITER ;
+
+-- Créer une procédure qui ajoute un nouveau membre du jury en recevant son nom et sa fonction
+DELIMITER $$
+CREATE PROCEDURE ajout_jury(IN nom VARCHAR(34), IN fonction VARCHAR(15))
+BEGIN
+    INSERT INTO MembreJury(Nom, Fonction) VALUES (nom, fonction);
+END $$
+DELIMITER ;
+
