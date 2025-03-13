@@ -1,0 +1,25 @@
+-- بسم الله الرحمن الرحيم
+-- la ilaha illa Allah Mohammed Rassoul Allah
+
+CREATE TRIGGER tg1 BEFORE INSERT ON Produits
+FOR EACH ROW
+BEGIN
+IF New.prix <= 0 OR New.stock < 0 THEN SIGNAL SQLSTATE '00001' SET MESSAGE_TEXT = "alhamdo li Allah"
+END IF;
+END;
+
+
+CREATE TRIGGER tg2 BEFORE UPDATE ON Produits
+FOR EACH ROW
+BEGIN
+IF New.prix < Old.prix THEN SIGNAL SQLSTATE '00001' SET MESSAGE_TEXT = "alhamdo li Allah"
+END IF;
+END;
+
+
+CREATE TRIGGER tg1 BEFORE DELETE ON CLIENTS
+FOR EACH ROW
+BEGIN
+IF 0 <> (SELECT COUNT(*) FROM COMMANDS WHERE id_client = Old.id) THEN SIGNAL SQLSTATE '00001' SET MESSAGE_TEXT = "alhamdo li Allah"
+END IF;
+END;
