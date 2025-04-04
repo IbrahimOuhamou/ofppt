@@ -2,6 +2,7 @@
 // بسم الله الرحمن الرحيم
 // la ilaha illa Allah Mohammed Rassoul Allah
 
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
 // Route::get('/', function () {
@@ -9,9 +10,9 @@ use Illuminate\Support\Facades\Route;
 // });
 Route::view('/', 'welcome');
 
-Route::get('/subhana-allah', function () {
-    return 'subhana Allah';
-});
+// Route::get('/subhana-allah', function () {
+//     return 'subhana Allah';
+// });
 
 // only cares about order
 Route::get('/subhana-allah/{id}/{category?}', function($id, $cat=null) {
@@ -20,5 +21,12 @@ Route::get('/subhana-allah/{id}/{category?}', function($id, $cat=null) {
         'category' => $cat,
     ]);
     // return 'subhana Allah: id = ' . $id . '. category = ' . ($cat ?? '(none)');
+});
+
+Route::view('/about', 'about');
+Route::view('/contact', 'contact');
+
+Route::post('/contact', function(Request $request) {
+    return view('contact-post', $request->all());
 });
 

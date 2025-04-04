@@ -1,15 +1,16 @@
 <!DOCTYPE html>
-<html dir="rtl" lang="ar">
 <head>
     <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <title>بسم الله الرحمن الرحيم</title>
-    <link href="/bismi_allah.css" rel="stylesheet" type="text/css" />
+    @vite('resources/css/app.css')
 </head>
 <body>
-    <header>
-        <a href="/subhana-allah">subhna-allah</a>
+    <header class="bg-amber-200">
+        <a href="/subhana-allah/1">subhna-allah</a>
         <a href="/">home</a>
+        <a href="/about">about</a>
+        <a href="/contact">contact</a>
     </header>
 
     <main>
