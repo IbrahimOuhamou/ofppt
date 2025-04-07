@@ -97,7 +97,20 @@ la ilaha illa Allah Mohammed Rassoul Allah
 1. db.students.find({}, {"nom": 1, "prénom": 1})
 2. db.students.find({}, {"_id": 0})
 3. db.students.find({}, {"email": 1, "cours": 1})
-4. db.students.find({}, {"nom": "Larav", "adresse.ville": 1})
+4. db.students.find({"adresse": { $exists: true }}, {"nom": "Larav", "adresse.ville": 1})
 5. db.students.find({"adresse.ville": "Rabat", "âge": {$gt: 20}})
+
+# Exercice 4
+
+1. db.students.find({$and: [{"âge": {$gte: 18}}, {"âge": {$lte: 25}}]})
+// AI ( '2.' )
+2. db.students.find({"name": "/^L/i"})
+3. db.students.find({$and: [{"cours": "c1"}, {"cours": "c2"]})
+4. db.students.find({$xor: [{"cours": "c1"}, {"cours": "c2"]})
+5. db.students.find({"adresse.ville": "Rabat". "age": {$gt: 20}})
+
+# Exercice 5
+
+1. db.students.updateOne({"nom": "Larav"}, {$set: {"nom": "Lava"}})
 
 
