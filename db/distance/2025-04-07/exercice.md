@@ -4,7 +4,7 @@ la ilaha illa Allah Mohammed Rassoul Allah
 # Exercice 1
 1. use students
     db.students.insertOne({
-        "name": "Larav",
+        "nom": "Larav",
         "prénom": "Ahmed",
         "âge": 24,
         "email": "example@no-reply.com",
@@ -16,7 +16,7 @@ la ilaha illa Allah Mohammed Rassoul Allah
     })
 
 2. db.students.insertMany([{
-        "name": "Larav2",
+        "nom": "Larav2",
         "prénom": "Ahmed2",
         "âge": 25,
         "email": "example2@no-reply.com",
@@ -26,7 +26,7 @@ la ilaha illa Allah Mohammed Rassoul Allah
         ],
     },
     {
-        "name": "Larav3",
+        "nom": "Larav3",
         "prénom": "Ahmed3",
         "âge": 26,
         "email": "example3@no-reply.com",
@@ -35,7 +35,7 @@ la ilaha illa Allah Mohammed Rassoul Allah
             "Algorithmique"
         ]
     },{
-        "name": "Larav3",
+        "nom": "Larav3",
         "prénom": "Ahmed3",
         "âge": 21,
         "email": "example4@no-reply.com",
@@ -46,7 +46,7 @@ la ilaha illa Allah Mohammed Rassoul Allah
     }])
 
 3. db.students.insertMany([{
-        "name": "Larav2",
+        "nom": "Larav2",
         "prénom": "Ahmed2",
         "âge": 25,
         "email": "example2@no-reply.com",
@@ -56,7 +56,7 @@ la ilaha illa Allah Mohammed Rassoul Allah
         ]
     },
     {
-        "name": "Larav3",
+        "nom": "Larav3",
         "prénom": "Ahmed3",
         "âge": 21,
         "email": "example4@no-reply.com",
@@ -67,7 +67,7 @@ la ilaha illa Allah Mohammed Rassoul Allah
     }])
 
 4.  db.students.insertOne({
-        "name": "Larav",
+        "nom": "Larav",
         "prénom": "Ahmed",
         "âge": 24,
         "email": "example@no-reply.com",
@@ -77,7 +77,9 @@ la ilaha illa Allah Mohammed Rassoul Allah
             "Algorithmique",
         ],
         "addresse": {
-            ""
+            "ville": "Rabat",
+            "rue": "lhihatinat",
+            "10020"
         }
     })
 
@@ -85,9 +87,17 @@ la ilaha illa Allah Mohammed Rassoul Allah
 # Exercice 2
 
 1. db.students.find({})
-2. db.students.find({"name": "Larav"})
+2. db.students.find({"nom": "Larav"})
 3. db.students.find({"âge": { $gt: 20 }})
 4. db.students.find({"cours": "Mathématiques"})
 5. db.students.find({}).sort({"âge": 1})
+
+# Exercice 3
+
+1. db.students.find({}, {"nom": 1, "prénom": 1})
+2. db.students.find({}, {"_id": 0})
+3. db.students.find({}, {"email": 1, "cours": 1})
+4. db.students.find({}, {"nom": "Larav", "adresse.ville": 1})
+5. db.students.find({"adresse.ville": "Rabat", "âge": {$gt: 20}})
 
 
