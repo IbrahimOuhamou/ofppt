@@ -6,9 +6,9 @@
 
     {{ csrf_field() }}
 
-    <label>
+    <label class="label">
         Name:
-        <input name="name" id="name" type="text" />
+        <input class="input" name="name" id="name" type="text" />
     </label>
 
     <label>
@@ -18,7 +18,7 @@
 
     <textarea name="message" placeholder="message"></textarea>
 
-    <button type="submit">Submit</button>
+    <button type="submit" class="bg-green-200 rounded-lg p-2">Submit</button>
 
 </form>
 @endsection
