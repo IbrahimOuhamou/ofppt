@@ -11,11 +11,12 @@
         <tbody>
 
             @foreach ($resources as $resource)
-                <td>{{ $resource['id'] }}</td>
-                <td>{{ $resource['name'] }}</td>
-                <td>{{ $resource['age'] }}</td>
+                <tr>
+                    <td>{{ $resource['id'] }}</td>
+                    <td>{{ $resource['name'] }}</td>
+                    <td>{{ $resource['age'] }}</td>
+                </tr>
             @endforeach
-
         </tbody>
     </table>
 @endsection

@@ -5,6 +5,19 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
+$resources = [
+    [
+        'id' => 1,
+        'name' => 'Ahmed',
+        'age' => 19,
+    ],
+    [
+        'id' => 2,
+        'name' => 'si Mohammed',
+        'age' => 20,
+    ],
+];
+
 // Route::get('/', function () {
 //     return view('welcome');
 // });
@@ -30,23 +43,11 @@ Route::post('/contact', function(Request $request) {
     return view('contact-post', $request->all());
 });
 
-$resources = [
-    [
-        'id' => 1,
-        'name' => 'Ahmed',
-        'age' => 19,
-    ],
-];
-
-Route::get('/resource', function() {
-    global $resources;
-    dd($resources);
+Route::get('/resource', function() use($resources) {
     return view('resource', ['resources' => $resources]);
 });
 
-Route::post('/resource', function(Request $request) {
-    global $resources;
-
+Route::post('/resource', function(Request $request) use($resources) {
     $resource = $request->all();
 
     $resources = array_push($resources, $resource);
@@ -54,13 +55,10 @@ Route::post('/resource', function(Request $request) {
     return redirect('/resource');
 });
 
-Route::put('/resource/{id}', function(Request $request, $id) {
-    global $resources;
-
+Route::put('/resource/{id}', function(Request $request, $id) use($resources) {
     $resource = $request->all();
 
-    $resource_index = array_find_key($resources, function($res) {
-        global $resource;
+    $resource_index = array_find_key($resources, function($res) use($resource) {
         return $res['id'] === $resource['id'];
     });
 
