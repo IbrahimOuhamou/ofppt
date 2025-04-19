@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blog - @yield('title')</title>
     @vite('resources/css/app.css')
+    @vite('resources/js/app.js')
 </head>
 <body class="bg-gray-100 text-gray-900 font-sans antialiased">
     <div class="max-w-4xl mx-auto px-4 py-8">

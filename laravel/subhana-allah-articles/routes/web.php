@@ -7,3 +7,9 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
 Route::resource('articles', ArticlesController::class);
+
+
+Route::fallback(function() {
+    return 'not found';
+});
+
